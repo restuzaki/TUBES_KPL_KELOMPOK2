@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("APOTEKKU_API_Kelompok2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9115a1d89b70d5f0669a4b14f3f449b95327202d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2b4aea12fa799868531920a78cbcbe2fed9530df")]
 [assembly: System.Reflection.AssemblyProductAttribute("APOTEKKU_API_Kelompok2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("APOTEKKU_API_Kelompok2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
