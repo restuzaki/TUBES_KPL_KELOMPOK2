@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\APOTEKKU_API_Kelompok2.props" />
+</Project>
