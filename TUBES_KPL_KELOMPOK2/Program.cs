@@ -131,7 +131,8 @@ class Program
             { "Beli Obat", async () => await pembelianObat.BeliObatAsync() },
             { "ChatBot", RunChatbotAsync },
             { "Sistem Baca Resep - Tampilkan Obat", () => Task.Run(() => BacaResepView.TampilkanObatTerdaftar()) },
-            { "Sistem Baca Resep - Cari Obat", () => Task.Run(() => BacaResepView.CariObat()) }
+            { "Sistem Baca Resep - Cari Obat", () => Task.Run(() => BacaResepView.CariObat()) },
+            { "Lihat Riwayat Pembelian", () => Task.Run(() => pembelianObat.TampilkanRiwayatPembelian()) },
         };
     }
 
