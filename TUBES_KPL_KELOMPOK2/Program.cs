@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Apotekku_API.Models;
-using TUBES_KPL_KELOMPOK2.Services; 
+using TUBES_KPL_KELOMPOK2.Services;
+using TUBES_KPL_KELOMPOK2.View;
 using TUBES_KPL_KELOMPOK2.Views.PengecekanIzinObat;
 
 class Program
 {
-   
+
     private static ObatService _obatService = new ObatService();
     private static PengecekanIzinObatView _pengecekanView = new PengecekanIzinObatView(_obatService);
     private static UserLogin _userLogin = new UserLogin();
@@ -90,7 +91,7 @@ class Program
                 Console.Clear();
                 await menuActions[keyMap[input]]();
 
-                
+
                 if (keyMap[input] != "ChatBot")
                 {
                     Console.WriteLine("\nTekan sembarang tombol untuk melanjutkan...");
@@ -127,7 +128,8 @@ class Program
             { "Lihat Produk", () => Task.Run(() => Console.WriteLine("Fitur Lihat Produk belum diimplementasikan.")) },
             { "Beli Obat", () => Task.Run(() => Console.WriteLine("Fitur Beli Obat belum diimplementasikan.")) },
             { "ChatBot", RunChatbotAsync },
-            { "Sistem Baca Resep", () => Task.Run(() => Console.WriteLine("Fitur Sistem Baca Resep belum diimplementasikan.")) },
+            { "Sistem Baca Resep - Tampilkan Obat", () => Task.Run(() => BacaResepView.TampilkanObatTerdaftar()) },
+            { "Sistem Baca Resep - Cari Obat", () => Task.Run(() => BacaResepView.CariObat()) }
         };
     }
 
@@ -143,20 +145,20 @@ class Program
 
             try
             {
-                
+
                 var response = await _chatbotService.GetChatbotResponse(message);
 
-                
+
                 Console.WriteLine($"Bot: {response}\n");
             }
             catch (KeyNotFoundException ex)
             {
-                
+
                 Console.WriteLine("Terjadi kesalahan pada struktur data. Respons dari server tidak sesuai.");
             }
             catch (Exception ex)
             {
-                
+
                 Console.WriteLine($"Terjadi kesalahan: {ex.Message}");
             }
         }
