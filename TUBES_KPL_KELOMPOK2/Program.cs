@@ -9,9 +9,13 @@ class Program
         UserLogin userlogin = new UserLogin();
         UserRegister userregister = new UserRegister();
 
+        PembelianObat pembelianObat = new PembelianObat();
+        AnalisisPenyakit analisisPenyakit = new AnalisisPenyakit();
+
+
         var mainMenuActions = new Dictionary<string, Action>
         {
-            { "1", () => HandleLogin(userlogin) },
+            { "1", () => HandleLogin(userlogin, pembelianObat,analisisPenyakit) },
             { "2", () => userregister.Register() },
             { "3", () => Environment.Exit(0) }
         };
@@ -38,17 +42,17 @@ class Program
         }
     }
 
-    static void HandleLogin(UserLogin userlogin)
+    static void HandleLogin(UserLogin userlogin, PembelianObat pembelianObat,AnalisisPenyakit analisisPenyakit)
     {
         User? user = userlogin.Login();
         if (user != null)
         {
             Console.WriteLine($"\nSelamat datang, {user.Nama}!");
 
-            if (user.Role == "admin")
-                ShowRoleMenu("Admin", GetAdminMenuActions());
-            else if (user.Role == "buyer")
-                ShowRoleMenu("Buyer", GetBuyerMenuActions());
+            if (user.Role == "Admin")
+                ShowRoleMenu("Admin", GetAdminMenuActions(analisisPenyakit));
+            else if (user.Role == "Buyer")
+                ShowRoleMenu("Buyer", GetBuyerMenuActions(pembelianObat));
             else
                 Console.WriteLine("Role tidak dikenali.");
         }
@@ -88,7 +92,7 @@ class Program
         }
     }
 
-    static Dictionary<string, Action> GetAdminMenuActions()
+    static Dictionary<string, Action> GetAdminMenuActions(AnalisisPenyakit analisisPenyakit)
     {
         return new Dictionary<string, Action>
         {
@@ -96,19 +100,19 @@ class Program
             { "Management Member Apotek", () => Console.WriteLine("Fitur Management Member Apotek belum diimplementasikan.") },
             { "Management Pemasukan", () => Console.WriteLine("Fitur Management Pemasukan belum diimplementasikan.") },
             { "Pengeluaran Apotek", () => Console.WriteLine("Fitur Pengeluaran Apotek belum diimplementasikan.") },
-            { "Analisis Penyakit Bulanan", () => Console.WriteLine("Fitur Analisis Penyakit Bulanan belum diimplementasikan.") },
+            { "Analisis Penyakit Bulanan", async () => await analisisPenyakit.TampilkanAnalisisAsync() },
             { "Pengecekan Izin Obat", () => Console.WriteLine("Fitur Pengecekan Izin Obat belum diimplementasikan.") },
             { "Management Pegawai", () => Console.WriteLine("Fitur Management Pegawai belum diimplementasikan.") },
             { "Sistem Riwayat Pembelian", () => Console.WriteLine("Fitur Sistem Riwayat Pembelian belum diimplementasikan.") },
         };
     }
 
-    static Dictionary<string, Action> GetBuyerMenuActions()
+    static Dictionary<string, Action> GetBuyerMenuActions(PembelianObat pembelianObat)
     {
         return new Dictionary<string, Action>
         {
-            { "Lihat Produk", () => Console.WriteLine("Fitur Lihat Produk belum diimplementasikan.") },
-            { "Beli Obat", () => Console.WriteLine("Fitur Beli Obat belum diimplementasikan.") },
+            { "Lihat Produk", () => pembelianObat.TampilkanDaftarObat()  },
+            { "Beli Obat", async () => await pembelianObat.BeliObatAsync()},
             { "ChatBot", () => Console.WriteLine("Fitur ChatBot belum diimplementasikan.") },
             { "Sistem Baca Resep", () => Console.WriteLine("Fitur Sistem Baca Resep belum diimplementasikan.") },
         };
