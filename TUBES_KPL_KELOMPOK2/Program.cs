@@ -118,7 +118,7 @@ class Program
             { "Pengeluaran Apotek", () => Task.Run(() => Console.WriteLine("Fitur Pengeluaran Apotek belum diimplementasikan.")) },
             { "Analisis Penyakit Bulanan", async () => await analisisPenyakit.TampilkanAnalisisAsync()},
             { "Pengecekan Izin Obat", async () => await _pengecekanView.ShowMenu() },
-            { "Management Pegawai", () => Task.Run(() => Console.WriteLine("Fitur Management Pegawai belum diimplementasikan.")) },
+            { "Management Pegawai", async () => await new ManajemenPegawaiView(new PegawaiService()).ShowMenu() },
             { "Sistem Riwayat Pembelian", () => Task.Run(() => Console.WriteLine("Fitur Sistem Riwayat Pembelian belum diimplementasikan.")) },
         };
     }
