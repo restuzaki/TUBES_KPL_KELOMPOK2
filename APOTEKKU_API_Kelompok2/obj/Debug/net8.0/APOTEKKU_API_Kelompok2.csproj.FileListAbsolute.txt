@@ -77,3 +77,6 @@ C:\Users\ASUS\source\repos\TUBES_KPL_KELOMPOK2\APOTEKKU_API_Kelompok2\obj\Debug\
 C:\Users\ASUS\source\repos\TUBES_KPL_KELOMPOK2\APOTEKKU_API_Kelompok2\bin\Debug\net8.0\Data\Obat.json
 C:\Users\ASUS\source\repos\TUBES_KPL_KELOMPOK2\APOTEKKU_API_Kelompok2\bin\Debug\net8.0\Data\Pegawai.json
 C:\Users\ASUS\source\repos\TUBES_KPL_KELOMPOK2\APOTEKKU_API_Kelompok2\bin\Debug\net8.0\Data\PenyakitAnalisis.Json
+D:\Kpl\TUBES_KPL_KELOMPOK2\APOTEKKU_API_Kelompok2\bin\Debug\net8.0\Data\Obat.json
+D:\Kpl\TUBES_KPL_KELOMPOK2\APOTEKKU_API_Kelompok2\bin\Debug\net8.0\Data\Pegawai.json
+D:\Kpl\TUBES_KPL_KELOMPOK2\APOTEKKU_API_Kelompok2\bin\Debug\net8.0\Data\PenyakitAnalisis.Json
