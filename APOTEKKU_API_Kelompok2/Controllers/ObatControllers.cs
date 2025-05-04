@@ -15,15 +15,14 @@ namespace Apotekku_API.Controllers
 
         private List<Obat> BacaDataObat()
         {
-            try
-            {
+            
+           
                 string jsonString = System.IO.File.ReadAllText(jsonFilePath);
                 return JsonSerializer.Deserialize<List<Obat>>(jsonString) ?? new List<Obat>();
-            }
-            catch
-            {
-                return new List<Obat>();
-            }
+            
+            
+               
+            
         }
 
         private void SimpanDataObat(List<Obat> data)

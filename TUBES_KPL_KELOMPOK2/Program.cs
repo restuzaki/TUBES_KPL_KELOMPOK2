@@ -1,23 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
 using Apotekku_API.Models;
+using TUBES_KPL_KELOMPOK2.Services;
+using TUBES_KPL_KELOMPOK2.Views.PengecekanIzinObat;
 
 class Program
 {
+    // Add these static fields at class level
+    private static ObatService _obatService = new ObatService();
+    private static PengecekanIzinObatView _pengecekanView = new PengecekanIzinObatView(_obatService);
+    private static UserLogin _userLogin = new UserLogin();
+    private static UserRegister _userRegister = new UserRegister();
+
     static void Main()
     {
-        UserLogin userlogin = new UserLogin();
-        UserRegister userregister = new UserRegister();
-
         var mainMenuActions = new Dictionary<string, Action>
         {
-            { "1", () => HandleLogin(userlogin) },
-            { "2", () => userregister.Register() },
+            { "1", () => HandleLogin(_userLogin) },
+            { "2", () => _userRegister.Register() },
             { "3", () => Environment.Exit(0) }
         };
 
         while (true)
         {
+            Console.Clear();
             Console.WriteLine("=== Aplikasi Apotek ===");
             Console.WriteLine("1. Login");
             Console.WriteLine("2. Register");
@@ -32,9 +38,8 @@ class Program
             else
             {
                 Console.WriteLine("Pilihan tidak valid, coba lagi.");
+                Console.ReadKey();
             }
-
-            Console.WriteLine();
         }
     }
 
@@ -45,9 +50,9 @@ class Program
         {
             Console.WriteLine($"\nSelamat datang, {user.Nama}!");
 
-            if (user.Role == "admin")
+            if (user.Role == "Admin")
                 ShowRoleMenu("Admin", GetAdminMenuActions());
-            else if (user.Role == "buyer")
+            else if (user.Role == "Buyer")
                 ShowRoleMenu("Buyer", GetBuyerMenuActions());
             else
                 Console.WriteLine("Role tidak dikenali.");
@@ -59,9 +64,10 @@ class Program
         string choice = "";
         while (choice != "exit")
         {
+            Console.Clear();
             Console.WriteLine($"\n=== Menu {role} ===");
             int index = 1;
-            var keyMap = new Dictionary<string, string>(); // index to actual key
+            var keyMap = new Dictionary<string, string>();
             foreach (var kvp in menuActions)
             {
                 Console.WriteLine($"{index}. {kvp.Key}");
@@ -79,11 +85,15 @@ class Program
             }
             else if (keyMap.ContainsKey(input))
             {
+                Console.Clear();
                 menuActions[keyMap[input]]();
+                Console.WriteLine("\nTekan sembarang tombol untuk melanjutkan...");
+                Console.ReadKey();
             }
             else
             {
                 Console.WriteLine("Pilihan tidak valid, coba lagi.");
+                Console.ReadKey();
             }
         }
     }
@@ -97,7 +107,7 @@ class Program
             { "Management Pemasukan", () => Console.WriteLine("Fitur Management Pemasukan belum diimplementasikan.") },
             { "Pengeluaran Apotek", () => Console.WriteLine("Fitur Pengeluaran Apotek belum diimplementasikan.") },
             { "Analisis Penyakit Bulanan", () => Console.WriteLine("Fitur Analisis Penyakit Bulanan belum diimplementasikan.") },
-            { "Pengecekan Izin Obat", () => Console.WriteLine("Fitur Pengecekan Izin Obat belum diimplementasikan.") },
+            { "Pengecekan Izin Obat", () => _pengecekanView.ShowMenu().Wait() }, 
             { "Management Pegawai", () => Console.WriteLine("Fitur Management Pegawai belum diimplementasikan.") },
             { "Sistem Riwayat Pembelian", () => Console.WriteLine("Fitur Sistem Riwayat Pembelian belum diimplementasikan.") },
         };
