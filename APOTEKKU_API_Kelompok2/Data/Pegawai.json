@@ -3,24 +3,24 @@
     "id": "PG001",
     "nama": "Damai Putra",
     "jabatan": "Apoteker",
-    "status": "Aktif"
+    "status": 0
   },
   {
     "id": "PG002",
     "nama": "Valentino Bimo",
     "jabatan": "Asisten Apoteker",
-    "status": "Cuti"
+    "status": 2
   },
   {
     "id": "PG003",
     "nama": "Dani",
     "jabatan": "Manajer Operasional",
-    "status": "Nonaktif"
+    "status": 1
   },
   {
     "id": "PG004",
     "nama": "Ahmad Subardjoe",
     "jabatan": "Kasir",
-    "status": "Aktif"
+    "status": 0
   }
 ]

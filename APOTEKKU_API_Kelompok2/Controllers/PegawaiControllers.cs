@@ -11,43 +11,36 @@ namespace Apotekku_API.Controllers
     public class PegawaiController : Controller
     {
         private static string jsonFilePath = "Data/Pegawai.json";
-        private static List<Pegawai> dataPegawai;
+
+       
+        private List<Pegawai> GetDataFromFile()
+        {
+            if (!System.IO.File.Exists(jsonFilePath))
+            {
+                
+                return new List<Pegawai>();
+            }
+
+            string jsonString = System.IO.File.ReadAllText(jsonFilePath);
+            return string.IsNullOrWhiteSpace(jsonString)
+                ? new List<Pegawai>()  // Jika JSON kosong, kembalikan list kosong
+                : JsonSerializer.Deserialize<List<Pegawai>>(jsonString) ?? new List<Pegawai>();  
+        }
 
         [HttpGet]
         public ActionResult<List<Pegawai>> Get()
         {
-            string jsonString = System.IO.File.ReadAllText(jsonFilePath);
-            var result = JsonSerializer.Deserialize<List<Pegawai>>(jsonString);
-
-            if (result == null)
-            {
-                result = new List<Pegawai>();
-            }
-
+            var result = GetDataFromFile();
             return Ok(result);
         }
 
         [HttpGet("{id}")]
         public ActionResult<Pegawai> Get(string id)
         {
-            string jsonString = System.IO.File.ReadAllText(jsonFilePath);
-            var result = JsonSerializer.Deserialize<List<Pegawai>>(jsonString);
+            var result = GetDataFromFile();
 
-            if (result == null)
-            {
-                result = new List<Pegawai>();
-            }
-
-            Pegawai pegawai = null;
-
-            foreach (var item in result)
-            {
-                if (item.id == id)
-                {
-                    pegawai = item;
-                    break;
-                }
-            }
+            
+            var pegawai = result.Find(p => p.id == id);
 
             if (pegawai == null)
             {
@@ -60,11 +53,12 @@ namespace Apotekku_API.Controllers
         [HttpPost]
         public ActionResult<Pegawai> Post([FromBody] Pegawai pegawai)
         {
-            string jsonString = System.IO.File.ReadAllText(jsonFilePath);
-            var result = JsonSerializer.Deserialize<List<Pegawai>>(jsonString);
-            if (result == null)
+            var result = GetDataFromFile();
+
+           
+            if (result.Exists(p => p.id == pegawai.id))
             {
-                result = new List<Pegawai>();
+                return Conflict("ID Pegawai sudah ada");
             }
 
             result.Add(pegawai);
@@ -78,24 +72,10 @@ namespace Apotekku_API.Controllers
         [HttpPut("{id}")]
         public ActionResult<Pegawai> Put(string id, [FromBody] Pegawai pegawai)
         {
-            string jsonString = System.IO.File.ReadAllText(jsonFilePath);
-            var result = JsonSerializer.Deserialize<List<Pegawai>>(jsonString);
+            var result = GetDataFromFile();
 
-            if (result == null)
-            {
-                result = new List<Pegawai>();
-            }
-
-            Pegawai existingPegawai = null;
-            foreach (var item in result)
-            {
-                if (item.id == id)
-                {
-                    existingPegawai = item;
-                    break;
-                }
-            }
-
+            
+            var existingPegawai = result.Find(p => p.id == id);
             if (existingPegawai == null)
             {
                 return NotFound("Pegawai tidak ditemukan");
@@ -114,24 +94,10 @@ namespace Apotekku_API.Controllers
         [HttpDelete("{id}")]
         public ActionResult Delete(string id)
         {
-            string jsonString = System.IO.File.ReadAllText(jsonFilePath);
-            var result = JsonSerializer.Deserialize<List<Pegawai>>(jsonString);
+            var result = GetDataFromFile();
 
-            if (result == null)
-            {
-                result = new List<Pegawai>();
-            }
-
-            Pegawai pegawaiToDelete = null;
-            foreach (var item in result)
-            {
-                if (item.id == id)
-                {
-                    pegawaiToDelete = item;
-                    break;
-                }
-            }
-
+          
+            var pegawaiToDelete = result.Find(p => p.id == id);
             if (pegawaiToDelete == null)
             {
                 return NotFound("Pegawai tidak ditemukan");
