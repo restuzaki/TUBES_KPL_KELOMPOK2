@@ -141,7 +141,7 @@ class Program
     {
         return new Dictionary<string, Func<Task>>
         {
-            { "Lihat Stok Obat", () => Task.Run(() => Console.WriteLine("Fitur belum diimplementasikan.")) },
+            { "Lihat Stok Obat", async () => await new StokObatView().MenuStokObat() },
             { "Management Member Apotek", () => Task.Run(() => Console.WriteLine("Fitur belum diimplementasikan.")) },
             { "Management Pemasukan", () => Task.Run(() => Console.WriteLine("Fitur belum diimplementasikan.")) },
             { "Pengeluaran Apotek", () => Task.Run(() => Console.WriteLine("Fitur belum diimplementasikan.")) },
