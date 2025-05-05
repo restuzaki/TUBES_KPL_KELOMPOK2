@@ -123,7 +123,6 @@ C:\Users\damai\TUBES_KPL_KELOMPOK2\APOTEKKU_API_Kelompok2\obj\Debug\net8.0\refin
 C:\Users\damai\TUBES_KPL_KELOMPOK2\APOTEKKU_API_Kelompok2\obj\Debug\net8.0\APOTEKKU_API_Kelompok2.pdb
 C:\Users\damai\TUBES_KPL_KELOMPOK2\APOTEKKU_API_Kelompok2\obj\Debug\net8.0\APOTEKKU_API_Kelompok2.genruntimeconfig.cache
 C:\Users\damai\TUBES_KPL_KELOMPOK2\APOTEKKU_API_Kelompok2\obj\Debug\net8.0\ref\APOTEKKU_API_Kelompok2.dll
-C:\Users\damai\TUBES_KPL_KELOMPOK2\APOTEKKU_API_Kelompok2\bin\Debug\net8.0\Data\Bot.json
 C:\Users\macbookpro\TUBES_KPL_KELOMPOK2\APOTEKKU_API_Kelompok2\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\macbookpro\TUBES_KPL_KELOMPOK2\APOTEKKU_API_Kelompok2\bin\Debug\net8.0\appsettings.json
 C:\Users\macbookpro\TUBES_KPL_KELOMPOK2\APOTEKKU_API_Kelompok2\bin\Debug\net8.0\Data\Bot.json

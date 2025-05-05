@@ -16,6 +16,8 @@ class Program
     private static ChatbotView _chatbotService = new ChatbotView();
     private static PembelianObat _pembelianObat = new PembelianObat();
     private static AnalisisPenyakit _analisisPenyakit = new AnalisisPenyakit();
+    private static DataObatView _dataObatView = new DataObatView();
+    
 
     static async Task Main()
     {
@@ -127,7 +129,7 @@ class Program
     {
         return new Dictionary<string, Func<Task>>
         {
-            { "Lihat Produk", async () =>  pembelianObat.TampilkanDaftarObat()  },
+            { "Lihat Produk", async () => await _dataObatView.TampilkanDaftarObatAsync() },
             { "Beli Obat", async () => await pembelianObat.BeliObatAsync() },
             { "ChatBot", RunChatbotAsync },
             { "Sistem Baca Resep - Tampilkan Obat", () => Task.Run(() => BacaResepView.TampilkanObatTerdaftar()) },
