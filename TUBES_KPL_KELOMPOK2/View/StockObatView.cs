@@ -89,7 +89,7 @@ public class StokObatView
         };
 
         await _service.TambahObatAsync(obat);
-        Console.WriteLine("✅ Obat berhasil ditambahkan.");
+        Console.WriteLine("Obat berhasil ditambahkan.");
     }
 
     private async Task UpdateStokObat()
@@ -100,7 +100,7 @@ public class StokObatView
         int stokBaru = int.Parse(Console.ReadLine()!);
 
         await _service.UpdateStokAsync(kode, stokBaru);
-        Console.WriteLine("✅ Stok berhasil diperbarui.");
+        Console.WriteLine("Stok berhasil diperbarui.");
     }
 
     private async Task HapusObat()
@@ -110,8 +110,8 @@ public class StokObatView
 
         bool sukses = await _service.HapusObatAsync(kode);
         if (sukses)
-            Console.WriteLine("✅ Obat berhasil dihapus.");
+            Console.WriteLine("Obat berhasil dihapus.");
         else
-            Console.WriteLine("❌ Gagal menghapus obat.");
+            Console.WriteLine("Gagal menghapus obat.");
     }
 }
