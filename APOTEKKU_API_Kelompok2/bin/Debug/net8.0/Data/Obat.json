@@ -1,11 +1,11 @@
 [
-   {
-        "id": "OB001",
-        "nama": "Paracetamol",
-        "status": 0,
-        "harga": 5000,
-        "kadaluarsa": "2026-01-15",
-        "stok": 250
+  {
+    "id": "OB001",
+    "nama": "Paracetamol",
+    "status": 0,
+    "harga": 5000,
+    "kadaluarsa": "2026-01-15",
+    "stok": 250
   },
   {
     "id": "OB002",
@@ -14,7 +14,6 @@
     "harga": 12000,
     "kadaluarsa": "2025-11-30",
     "stok": 185
-
   },
   {
     "id": "OB003",
@@ -79,5 +78,13 @@
     "harga": 3000,
     "kadaluarsa": "2026-03-22",
     "stok": 25
+  },
+  {
+    "id": "OB011",
+    "nama": "Antangin",
+    "status": 0,
+    "harga": 0,
+    "kadaluarsa": "2026-05-05",
+    "stok": 24
   }
 ]

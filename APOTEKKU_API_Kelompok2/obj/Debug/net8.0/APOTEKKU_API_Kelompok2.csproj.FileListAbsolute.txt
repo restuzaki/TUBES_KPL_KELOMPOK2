@@ -254,3 +254,4 @@ C:\Users\Achmad fadjry\Desktop\KONTRUKSI PERANGKAT LUNAK SMESTER 4\TUBES_KPL_KEL
 C:\Users\Achmad fadjry\Desktop\KONTRUKSI PERANGKAT LUNAK SMESTER 4\TUBES_KPL_KELOMPOK2\APOTEKKU_API_Kelompok2\obj\Debug\net8.0\APOTEKKU_API_Kelompok2.pdb
 C:\Users\Achmad fadjry\Desktop\KONTRUKSI PERANGKAT LUNAK SMESTER 4\TUBES_KPL_KELOMPOK2\APOTEKKU_API_Kelompok2\obj\Debug\net8.0\APOTEKKU_API_Kelompok2.genruntimeconfig.cache
 C:\Users\Achmad fadjry\Desktop\KONTRUKSI PERANGKAT LUNAK SMESTER 4\TUBES_KPL_KELOMPOK2\APOTEKKU_API_Kelompok2\obj\Debug\net8.0\ref\APOTEKKU_API_Kelompok2.dll
+C:\Users\Achmad fadjry\Desktop\KONTRUKSI PERANGKAT LUNAK SMESTER 4\TUBES_KPL_KELOMPOK2\APOTEKKU_API_Kelompok2\bin\Debug\net8.0\Data\MemberData.json

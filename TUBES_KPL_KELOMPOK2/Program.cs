@@ -142,7 +142,7 @@ class Program
         return new Dictionary<string, Func<Task>>
         {
             { "Lihat Stok Obat", async () => await new StokObatView().MenuStokObat() },
-            { "Management Member Apotek", () => Task.Run(() => Console.WriteLine("Fitur belum diimplementasikan.")) },
+            { "Management Member Apotek", async () => await new ManajemenMemberView().ShowMenu() },
             { "Management Pemasukan", () => Task.Run(() => Console.WriteLine("Fitur belum diimplementasikan.")) },
             { "Pengeluaran Apotek", () => Task.Run(() => Console.WriteLine("Fitur belum diimplementasikan.")) },
             { "Analisis Penyakit Bulanan", async () => await analisisPenyakit.TampilkanAnalisisAsync() },
