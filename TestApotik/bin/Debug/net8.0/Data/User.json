@@ -1,0 +1,68 @@
+[
+  {
+    "Id": 1,
+    "Nama": "admin",
+    "Password": "admin123",
+    "Role": "Admin"
+  },
+  {
+    "Id": 2,
+    "Nama": "budi",
+    "Password": "budi456",
+    "Role": "Buyer"
+  },
+  {
+    "Id": 3,
+    "Nama": "damai",
+    "Password": "1234",
+    "Role": "Buyer"
+  },
+  {
+    "Id": 4,
+    "Nama": "johan",
+    "Password": "1234",
+    "Role": "Buyer"
+  },
+  {
+    "Id": 5,
+    "Nama": "irfan",
+    "Password": "1234",
+    "Role": "Buyer"
+  },
+  {
+    "Id": 6,
+    "Nama": "niko",
+    "Password": "1234",
+    "Role": "Buyer"
+  },
+  {
+    "Id": 7,
+    "Nama": "jidan",
+    "Password": "jidanbauk",
+    "Role": "Buyer"
+  },
+  {
+    "Id": 8,
+    "Nama": "abdul",
+    "Password": "abdul123",
+    "Role": "Buyer"
+  },
+  {
+    "Id": 9,
+    "Nama": "abula",
+    "Password": "abdulA",
+    "Role": "Buyer"
+  },
+  {
+    "Id": 10,
+    "Nama": "ahmad",
+    "Password": "ahmaD",
+    "Role": "Buyer"
+  },
+  {
+    "Id": 11,
+    "Nama": "yoga",
+    "Password": "Yoga",
+    "Role": "Buyer"
+  }
+]

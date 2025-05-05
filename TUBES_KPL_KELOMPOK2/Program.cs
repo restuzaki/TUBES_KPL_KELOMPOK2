@@ -155,7 +155,7 @@ class Program
             { "Analisis Penyakit Bulanan", async () => await analisisPenyakit.TampilkanAnalisisAsync() },
             { "Pengecekan Izin Obat", async () => await _pengecekanView.ShowMenu() },
             { "Management Pegawai", async () => await new ManajemenPegawaiView(new PegawaiService()).ShowMenu() },
-            { "Sistem Riwayat Pembelian", () => Task.Run(() => Console.WriteLine("Fitur Sistem Riwayat Pembelian belum diimplementasikan.")) },
+       
         };
     }
 
