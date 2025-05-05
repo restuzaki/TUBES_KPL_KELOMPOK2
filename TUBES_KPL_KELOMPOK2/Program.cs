@@ -8,7 +8,7 @@ using TUBES_KPL_KELOMPOK2.Views.PengecekanIzinObat;
 
 class Program
 {
-
+   
     private static ObatService _obatService = new ObatService();
     private static PengecekanIzinObatView _pengecekanView = new PengecekanIzinObatView(_obatService);
     private static UserLogin _userLogin = new UserLogin();
@@ -36,9 +36,9 @@ class Program
             Console.Write("Pilih opsi (1/2/3): ");
             string pilihan = Console.ReadLine();
 
-            if (mainMenuActions.ContainsKey(pilihan))
+            if (mainMenuActions.TryGetValue(pilihan, out var action))
             {
-                await mainMenuActions[pilihan]();
+                await action();
             }
             else
             {
@@ -48,7 +48,7 @@ class Program
         }
     }
 
-    static async Task HandleLogin(UserLogin userlogin,PembelianObat pembelianObat,AnalisisPenyakit analisisPenyakit)
+    static async Task HandleLogin(UserLogin userlogin, PembelianObat pembelianObat, AnalisisPenyakit analisisPenyakit)
     {
         User? user = userlogin.Login();
         if (user != null)
@@ -93,7 +93,7 @@ class Program
                 Console.Clear();
                 await menuActions[keyMap[input]]();
 
-
+                
                 if (keyMap[input] != "ChatBot")
                 {
                     Console.WriteLine("\nTekan sembarang tombol untuk melanjutkan...");
@@ -139,7 +139,8 @@ class Program
     static async Task RunChatbotAsync()
     {
         Console.WriteLine("=== Chatbot Apotek ===");
-        Console.WriteLine("ketik exit jika mau keluar");
+        Console.WriteLine("Ketik 'exit' untuk keluar");
+
         while (true)
         {
             Console.Write("Anda: ");
@@ -148,23 +149,22 @@ class Program
 
             try
             {
-
+                
                 var response = await _chatbotService.GetChatbotResponse(message);
 
-
+                
                 Console.WriteLine($"Bot: {response}\n");
             }
-            catch (KeyNotFoundException ex)
+            catch (KeyNotFoundException)
             {
-
+                
                 Console.WriteLine("Terjadi kesalahan pada struktur data. Respons dari server tidak sesuai.");
             }
             catch (Exception ex)
             {
-
+                
                 Console.WriteLine($"Terjadi kesalahan: {ex.Message}");
             }
         }
     }
-
 }

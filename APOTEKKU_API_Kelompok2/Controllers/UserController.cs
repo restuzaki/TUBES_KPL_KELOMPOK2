@@ -48,11 +48,17 @@ namespace Apotekku_API.Controllers
             if (users.Any(u => u.Nama == newUser.Nama))
                 return BadRequest("User sudah ada");
 
+            if (string.IsNullOrEmpty(newUser.Role))
+            {
+                newUser.Role = "buyer";
+            }
+
             newUser.Id = users.Count > 0 ? users.Max(u => u.Id) + 1 : 1;
             users.Add(newUser);
             SimpanDataUser(users);
             return Ok(newUser);
         }
+
 
         
         [HttpPost("login")]

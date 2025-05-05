@@ -1,24 +1,38 @@
 [
-    {
-        "Id": 1,
-        "Nama": "admin",
-        "Password": "admin123",
-        "Role": "Admin"
-    },
-    {
-        "Id": 2,
-        "Nama": "budi",
-        "Password": "budi456",
-        "Role": "Buyer"
-    }
+  {
+    "Id": 1,
+    "Nama": "admin",
+    "Password": "admin123",
+    "Role": "Admin"
+  },
+  {
+    "Id": 2,
+    "Nama": "budi",
+    "Password": "budi456",
+    "Role": "Buyer"
+  },
+  {
+    "Id": 3,
+    "Nama": "damai",
+    "Password": "1234",
+    "Role": "Buyer"
+  },
+  {
+    "Id": 4,
+    "Nama": "johan",
+    "Password": "1234",
+    "Role": "Buyer"
+  },
+  {
+    "Id": 5,
+    "Nama": "irfan",
+    "Password": "1234",
+    "Role": "Buyer"
+  },
+  {
+    "Id": 6,
+    "Nama": "niko",
+    "Password": "1234",
+    "Role": "Buyer"
+  }
 ]
-
-
-
-
-
-
-
-
-
-
