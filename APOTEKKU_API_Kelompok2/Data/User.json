@@ -40,5 +40,29 @@
     "Nama": "jidan",
     "Password": "jidanbauk",
     "Role": "Buyer"
+  },
+  {
+    "Id": 8,
+    "Nama": "abdul",
+    "Password": "abdul123",
+    "Role": "Buyer"
+  },
+  {
+    "Id": 9,
+    "Nama": "abula",
+    "Password": "abdulA",
+    "Role": "Buyer"
+  },
+  {
+    "Id": 10,
+    "Nama": "ahmad",
+    "Password": "ahmaD",
+    "Role": "Buyer"
+  },
+  {
+    "Id": 11,
+    "Nama": "yoga",
+    "Password": "Yoga",
+    "Role": "Buyer"
   }
 ]
