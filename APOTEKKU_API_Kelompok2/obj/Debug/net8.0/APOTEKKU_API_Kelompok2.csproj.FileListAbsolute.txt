@@ -300,3 +300,4 @@ C:\Users\bimov\Source\Repos\TUBES_KPL_KELOMPOK2.0\APOTEKKU_API_Kelompok2\obj\Deb
 C:\Users\bimov\Source\Repos\TUBES_KPL_KELOMPOK2.0\APOTEKKU_API_Kelompok2\obj\Debug\net8.0\APOTEKKU_API_Kelompok2.genruntimeconfig.cache
 C:\Users\bimov\Source\Repos\TUBES_KPL_KELOMPOK2.0\APOTEKKU_API_Kelompok2\obj\Debug\net8.0\ref\APOTEKKU_API_Kelompok2.dll
 C:\Users\damai\TUBES_KPL_KELOMPOK2\APOTEKKU_API_Kelompok2\bin\Debug\net8.0\Data\MemberData.json
+C:\Users\ASUS\source\repos\TUBES_KPL_KELOMPOK2\APOTEKKU_API_Kelompok2\bin\Debug\net8.0\Data\MemberData.json
