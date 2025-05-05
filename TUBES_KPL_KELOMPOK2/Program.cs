@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Apotekku_API.Models;
-using TUBES_KPL_KELOMPOK2.Services; 
+using TUBES_KPL_KELOMPOK2.Services;
 using TUBES_KPL_KELOMPOK2.Views.PengecekanIzinObat;
 
 class Program
 {
-   
     private static ObatService _obatService = new ObatService();
     private static PengecekanIzinObatView _pengecekanView = new PengecekanIzinObatView(_obatService);
     private static UserLogin _userLogin = new UserLogin();
@@ -18,8 +17,8 @@ class Program
     {
         var mainMenuActions = new Dictionary<string, Func<Task>>
         {
-            { "1", async () => await HandleLogin(_userLogin) },
-            { "2", async () => _userRegister.Register() },
+            { "1", async () => await HandleLogin() },
+            { "2", async () => await Task.Run(() => _userRegister.Register()) },
             { "3", () => Task.Run(() => Environment.Exit(0)) }
         };
 
@@ -33,9 +32,9 @@ class Program
             Console.Write("Pilih opsi (1/2/3): ");
             string pilihan = Console.ReadLine();
 
-            if (mainMenuActions.ContainsKey(pilihan))
+            if (mainMenuActions.TryGetValue(pilihan, out var action))
             {
-                await mainMenuActions[pilihan]();
+                await action();
             }
             else
             {
@@ -45,9 +44,9 @@ class Program
         }
     }
 
-    static async Task HandleLogin(UserLogin userlogin)
+    static async Task HandleLogin()
     {
-        User? user = userlogin.Login();
+        User? user = _userLogin.Login();
         if (user != null)
         {
             Console.WriteLine($"\nSelamat datang, {user.Nama}!");
@@ -58,6 +57,11 @@ class Program
                 await ShowRoleMenu("Buyer", GetBuyerMenuActions());
             else
                 Console.WriteLine("Role tidak dikenali.");
+        }
+        else
+        {
+            Console.WriteLine("Login gagal. Silakan coba lagi.");
+            Console.ReadKey();
         }
     }
 
@@ -90,7 +94,6 @@ class Program
                 Console.Clear();
                 await menuActions[keyMap[input]]();
 
-                
                 if (keyMap[input] != "ChatBot")
                 {
                     Console.WriteLine("\nTekan sembarang tombol untuk melanjutkan...");
@@ -134,7 +137,8 @@ class Program
     static async Task RunChatbotAsync()
     {
         Console.WriteLine("=== Chatbot Apotek ===");
-        Console.WriteLine("ketik exit jika mau keluar");
+        Console.WriteLine("Ketik 'exit' untuk keluar");
+
         while (true)
         {
             Console.Write("Anda: ");
@@ -143,23 +147,17 @@ class Program
 
             try
             {
-                
                 var response = await _chatbotService.GetChatbotResponse(message);
-
-                
                 Console.WriteLine($"Bot: {response}\n");
             }
-            catch (KeyNotFoundException ex)
+            catch (KeyNotFoundException)
             {
-                
-                Console.WriteLine("Terjadi kesalahan pada struktur data. Respons dari server tidak sesuai.");
+                Console.WriteLine("Terjadi kesalahan pada struktur data.");
             }
             catch (Exception ex)
             {
-                
                 Console.WriteLine($"Terjadi kesalahan: {ex.Message}");
             }
         }
     }
-
 }

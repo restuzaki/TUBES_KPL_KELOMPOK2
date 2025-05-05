@@ -12,14 +12,19 @@ public class UserLogin
     public User Login()
     {
         Console.Write("Masukkan nama: ");
-        string nama = Console.ReadLine();
+        string nama = Console.ReadLine()?.Trim();  
 
         Console.Write("Masukkan password: ");
-        string password = Console.ReadLine();
+        string password = Console.ReadLine()?.Trim();  
 
         var users = LoadUsers();
 
-        var user = users.FirstOrDefault(u => u.Nama == nama && u.Password == password);
+        
+        var user = users.FirstOrDefault(u =>
+            u.Nama.Equals(nama, StringComparison.OrdinalIgnoreCase) &&
+            u.Password.Trim() == password  
+        );
+
         if (user != null)
         {
             Console.WriteLine($"Login berhasil. Selamat datang, {user.Nama} dengan role {user.Role}.");

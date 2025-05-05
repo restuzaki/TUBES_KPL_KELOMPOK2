@@ -1,60 +1,53 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
+using System.Net.Http;
+using System.Text;
 using System.Text.Json;
 using Apotekku_API.Models;
 
-public class UserRegister
+namespace TUBES_KPL_KELOMPOK2.Services
 {
-    private readonly string jsonFilePath = "Data/User.json";
-
-    public void Register()
+    public class UserRegister
     {
-        Console.Write("Masukkan nama: ");
-        string nama = Console.ReadLine();
+        private static readonly HttpClient client = new HttpClient();
+        private readonly string apiUrl = "http://localhost:5193/api/User/register";
 
-        Console.Write("Masukkan password: ");
-        string password = Console.ReadLine();
-
-        var users = LoadUsers();
-
-        if (users.Any(u => u.Nama == nama))
+        public User? Register()
         {
-            Console.WriteLine("Username sudah digunakan.");
-            return;
+            Console.WriteLine("\n=== Register User Baru ===");
+
+            Console.Write("Nama: ");
+            string nama = Console.ReadLine();
+
+            Console.Write("Password: ");
+            string password = Console.ReadLine();
+
+            
+            string role = "Buyer";
+
+            var user = new User(nama, password, role);
+
+            string jsonData = JsonSerializer.Serialize(user);
+            var content = new StringContent(jsonData, Encoding.UTF8, "application/json");
+
+            try
+            {
+                var response = client.PostAsync(apiUrl, content).Result;
+                if (response.IsSuccessStatusCode)
+                {
+                    Console.WriteLine("Registrasi berhasil sebagai Buyer!");
+                    return user;
+                }
+                else
+                {
+                    Console.WriteLine("Registrasi gagal. Username mungkin sudah digunakan.");
+                    return null;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Terjadi kesalahan saat register: {ex.Message}");
+                return null;
+            }
         }
-
-        var newUser = new User(nama, password, "buyer")
-        {
-            Id = users.Count > 0 ? users.Max(u => u.Id) + 1 : 1,
-            Nama = nama,
-            Password = password,
-            Role = "buyer"
-        };
-
-        users.Add(newUser);
-        SaveUsers(users);
-
-        Console.WriteLine("Registrasi berhasil sebagai buyer.");
-    }
-
-    private List<User> LoadUsers()
-    {
-        try
-        {
-            string json = File.ReadAllText(jsonFilePath);
-            return JsonSerializer.Deserialize<List<User>>(json) ?? new List<User>();
-        }
-        catch
-        {
-            return new List<User>();
-        }
-    }
-
-    private void SaveUsers(List<User> users)
-    {
-        string updatedJson = JsonSerializer.Serialize(users, new JsonSerializerOptions { WriteIndented = true });
-        File.WriteAllText(jsonFilePath, updatedJson);
     }
 }
