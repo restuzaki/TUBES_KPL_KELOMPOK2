@@ -3,22 +3,26 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Apotekku_API.Models;
 using TUBES_KPL_KELOMPOK2.Services;
+using TUBES_KPL_KELOMPOK2.View;
 using TUBES_KPL_KELOMPOK2.Views.PengecekanIzinObat;
 
 class Program
 {
+   
     private static ObatService _obatService = new ObatService();
     private static PengecekanIzinObatView _pengecekanView = new PengecekanIzinObatView(_obatService);
     private static UserLogin _userLogin = new UserLogin();
     private static UserRegister _userRegister = new UserRegister();
     private static ChatbotView _chatbotService = new ChatbotView();
+    private static PembelianObat _pembelianObat = new PembelianObat();
+    private static AnalisisPenyakit _analisisPenyakit = new AnalisisPenyakit();
 
     static async Task Main()
     {
         var mainMenuActions = new Dictionary<string, Func<Task>>
         {
-            { "1", async () => await HandleLogin() },
-            { "2", async () => await Task.Run(() => _userRegister.Register()) },
+            { "1", async () => await HandleLogin(_userLogin,_pembelianObat,_analisisPenyakit) },
+            { "2", async () => _userRegister.Register() },
             { "3", () => Task.Run(() => Environment.Exit(0)) }
         };
 
@@ -44,24 +48,19 @@ class Program
         }
     }
 
-    static async Task HandleLogin()
+    static async Task HandleLogin(UserLogin userlogin, PembelianObat pembelianObat, AnalisisPenyakit analisisPenyakit)
     {
-        User? user = _userLogin.Login();
+        User? user = userlogin.Login();
         if (user != null)
         {
             Console.WriteLine($"\nSelamat datang, {user.Nama}!");
 
             if (user.Role == "Admin")
-                await ShowRoleMenu("Admin", GetAdminMenuActions());
+                await ShowRoleMenu("Admin", GetAdminMenuActions(analisisPenyakit));
             else if (user.Role == "Buyer")
-                await ShowRoleMenu("Buyer", GetBuyerMenuActions());
+                await ShowRoleMenu("Buyer", GetBuyerMenuActions(pembelianObat));
             else
                 Console.WriteLine("Role tidak dikenali.");
-        }
-        else
-        {
-            Console.WriteLine("Login gagal. Silakan coba lagi.");
-            Console.ReadKey();
         }
     }
 
@@ -94,6 +93,7 @@ class Program
                 Console.Clear();
                 await menuActions[keyMap[input]]();
 
+                
                 if (keyMap[input] != "ChatBot")
                 {
                     Console.WriteLine("\nTekan sembarang tombol untuk melanjutkan...");
@@ -108,7 +108,7 @@ class Program
         }
     }
 
-    static Dictionary<string, Func<Task>> GetAdminMenuActions()
+    static Dictionary<string, Func<Task>> GetAdminMenuActions(AnalisisPenyakit analisisPenyakit)
     {
         return new Dictionary<string, Func<Task>>
         {
@@ -116,21 +116,23 @@ class Program
             { "Management Member Apotek", () => Task.Run(() => Console.WriteLine("Fitur Management Member Apotek belum diimplementasikan.")) },
             { "Management Pemasukan", () => Task.Run(() => Console.WriteLine("Fitur Management Pemasukan belum diimplementasikan.")) },
             { "Pengeluaran Apotek", () => Task.Run(() => Console.WriteLine("Fitur Pengeluaran Apotek belum diimplementasikan.")) },
-            { "Analisis Penyakit Bulanan", () => Task.Run(() => Console.WriteLine("Fitur Analisis Penyakit Bulanan belum diimplementasikan.")) },
+            { "Analisis Penyakit Bulanan", async () => await analisisPenyakit.TampilkanAnalisisAsync()},
             { "Pengecekan Izin Obat", async () => await _pengecekanView.ShowMenu() },
-            { "Management Pegawai", () => Task.Run(() => Console.WriteLine("Fitur Management Pegawai belum diimplementasikan.")) },
+            { "Management Pegawai", async () => await new ManajemenPegawaiView(new PegawaiService()).ShowMenu() },
             { "Sistem Riwayat Pembelian", () => Task.Run(() => Console.WriteLine("Fitur Sistem Riwayat Pembelian belum diimplementasikan.")) },
         };
     }
 
-    static Dictionary<string, Func<Task>> GetBuyerMenuActions()
+    static Dictionary<string, Func<Task>> GetBuyerMenuActions(PembelianObat pembelianObat)
     {
         return new Dictionary<string, Func<Task>>
         {
-            { "Lihat Produk", () => Task.Run(() => Console.WriteLine("Fitur Lihat Produk belum diimplementasikan.")) },
-            { "Beli Obat", () => Task.Run(() => Console.WriteLine("Fitur Beli Obat belum diimplementasikan.")) },
+            { "Lihat Produk", async () =>  pembelianObat.TampilkanDaftarObat()  },
+            { "Beli Obat", async () => await pembelianObat.BeliObatAsync() },
             { "ChatBot", RunChatbotAsync },
-            { "Sistem Baca Resep", () => Task.Run(() => Console.WriteLine("Fitur Sistem Baca Resep belum diimplementasikan.")) },
+            { "Sistem Baca Resep - Tampilkan Obat", () => Task.Run(() => BacaResepView.TampilkanObatTerdaftar()) },
+            { "Sistem Baca Resep - Cari Obat", () => Task.Run(() => BacaResepView.CariObat()) },
+            { "Lihat Riwayat Pembelian", () => Task.Run(() => pembelianObat.TampilkanRiwayatPembelian()) },
         };
     }
 
@@ -147,15 +149,20 @@ class Program
 
             try
             {
+                
                 var response = await _chatbotService.GetChatbotResponse(message);
+
+                
                 Console.WriteLine($"Bot: {response}\n");
             }
             catch (KeyNotFoundException)
             {
-                Console.WriteLine("Terjadi kesalahan pada struktur data.");
+                
+                Console.WriteLine("Terjadi kesalahan pada struktur data. Respons dari server tidak sesuai.");
             }
             catch (Exception ex)
             {
+                
                 Console.WriteLine($"Terjadi kesalahan: {ex.Message}");
             }
         }

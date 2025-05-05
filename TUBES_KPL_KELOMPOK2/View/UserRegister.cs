@@ -21,9 +21,7 @@ namespace TUBES_KPL_KELOMPOK2.Services
             Console.Write("Password: ");
             string password = Console.ReadLine();
 
-            
             string role = "Buyer";
-
             var user = new User(nama, password, role);
 
             string jsonData = JsonSerializer.Serialize(user);
@@ -34,20 +32,21 @@ namespace TUBES_KPL_KELOMPOK2.Services
                 var response = client.PostAsync(apiUrl, content).Result;
                 if (response.IsSuccessStatusCode)
                 {
-                    Console.WriteLine("Registrasi berhasil sebagai Buyer!");
-                    return user;
+                    Console.WriteLine("Registrasi berhasil!");
                 }
                 else
                 {
                     Console.WriteLine("Registrasi gagal. Username mungkin sudah digunakan.");
-                    return null;
                 }
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"Terjadi kesalahan saat register: {ex.Message}");
-                return null;
             }
+
+            Console.WriteLine("\nTekan sembarang tombol untuk kembali ke menu register...");
+            Console.ReadKey();
+            return null;
         }
     }
 }

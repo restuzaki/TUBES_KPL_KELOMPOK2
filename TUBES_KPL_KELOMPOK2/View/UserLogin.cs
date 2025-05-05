@@ -12,29 +12,32 @@ public class UserLogin
     public User Login()
     {
         Console.Write("Masukkan nama: ");
-        string nama = Console.ReadLine()?.Trim();  
+        string nama = Console.ReadLine()?.Trim();
 
         Console.Write("Masukkan password: ");
-        string password = Console.ReadLine()?.Trim();  
+        string password = Console.ReadLine()?.Trim();
 
         var users = LoadUsers();
 
-        
         var user = users.FirstOrDefault(u =>
             u.Nama.Equals(nama, StringComparison.OrdinalIgnoreCase) &&
-            u.Password.Trim() == password  
+            u.Password.Trim() == password
         );
 
         if (user != null)
         {
-            Console.WriteLine($"Login berhasil. Selamat datang, {user.Nama} dengan role {user.Role}.");
-            return user;
+            Console.WriteLine($"Login berhasil. Selamat datang, {user.Nama} !");
+            Console.WriteLine("\nTekan sembarang tombol untuk  ke menu Toko...");
         }
         else
         {
             Console.WriteLine("Nama atau password salah.");
-            return null;
+            Console.WriteLine("\nTekan sembarang tombol untuk kembali ke menu login...");
         }
+
+        Console.ReadKey();
+
+        return user;
     }
 
     private List<User> LoadUsers()

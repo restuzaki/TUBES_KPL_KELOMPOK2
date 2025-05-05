@@ -22,5 +22,11 @@
     "Nama": "johan",
     "Password": "1234",
     "Role": "Buyer"
+  },
+  {
+    "Id": 5,
+    "Nama": "irfan",
+    "Password": "1234",
+    "Role": "Buyer"
   }
 ]
