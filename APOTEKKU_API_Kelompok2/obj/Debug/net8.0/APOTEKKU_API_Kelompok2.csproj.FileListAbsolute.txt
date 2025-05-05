@@ -255,3 +255,47 @@ C:\Users\Achmad fadjry\Desktop\KONTRUKSI PERANGKAT LUNAK SMESTER 4\TUBES_KPL_KEL
 C:\Users\Achmad fadjry\Desktop\KONTRUKSI PERANGKAT LUNAK SMESTER 4\TUBES_KPL_KELOMPOK2\APOTEKKU_API_Kelompok2\obj\Debug\net8.0\APOTEKKU_API_Kelompok2.genruntimeconfig.cache
 C:\Users\Achmad fadjry\Desktop\KONTRUKSI PERANGKAT LUNAK SMESTER 4\TUBES_KPL_KELOMPOK2\APOTEKKU_API_Kelompok2\obj\Debug\net8.0\ref\APOTEKKU_API_Kelompok2.dll
 C:\Users\Achmad fadjry\Desktop\KONTRUKSI PERANGKAT LUNAK SMESTER 4\TUBES_KPL_KELOMPOK2\APOTEKKU_API_Kelompok2\bin\Debug\net8.0\Data\MemberData.json
+C:\Users\bimov\Source\Repos\TUBES_KPL_KELOMPOK2.0\APOTEKKU_API_Kelompok2\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\bimov\Source\Repos\TUBES_KPL_KELOMPOK2.0\APOTEKKU_API_Kelompok2\bin\Debug\net8.0\appsettings.json
+C:\Users\bimov\Source\Repos\TUBES_KPL_KELOMPOK2.0\APOTEKKU_API_Kelompok2\bin\Debug\net8.0\Data\MemberData.json
+C:\Users\bimov\Source\Repos\TUBES_KPL_KELOMPOK2.0\APOTEKKU_API_Kelompok2\bin\Debug\net8.0\Data\Obat.json
+C:\Users\bimov\Source\Repos\TUBES_KPL_KELOMPOK2.0\APOTEKKU_API_Kelompok2\bin\Debug\net8.0\Data\Pegawai.json
+C:\Users\bimov\Source\Repos\TUBES_KPL_KELOMPOK2.0\APOTEKKU_API_Kelompok2\bin\Debug\net8.0\Data\PenyakitAnalisis.Json
+C:\Users\bimov\Source\Repos\TUBES_KPL_KELOMPOK2.0\APOTEKKU_API_Kelompok2\bin\Debug\net8.0\Data\User.json
+C:\Users\bimov\Source\Repos\TUBES_KPL_KELOMPOK2.0\APOTEKKU_API_Kelompok2\bin\Debug\net8.0\APOTEKKU_API_Kelompok2.staticwebassets.endpoints.json
+C:\Users\bimov\Source\Repos\TUBES_KPL_KELOMPOK2.0\APOTEKKU_API_Kelompok2\bin\Debug\net8.0\APOTEKKU_API_Kelompok2.exe
+C:\Users\bimov\Source\Repos\TUBES_KPL_KELOMPOK2.0\APOTEKKU_API_Kelompok2\bin\Debug\net8.0\APOTEKKU_API_Kelompok2.deps.json
+C:\Users\bimov\Source\Repos\TUBES_KPL_KELOMPOK2.0\APOTEKKU_API_Kelompok2\bin\Debug\net8.0\APOTEKKU_API_Kelompok2.runtimeconfig.json
+C:\Users\bimov\Source\Repos\TUBES_KPL_KELOMPOK2.0\APOTEKKU_API_Kelompok2\bin\Debug\net8.0\APOTEKKU_API_Kelompok2.dll
+C:\Users\bimov\Source\Repos\TUBES_KPL_KELOMPOK2.0\APOTEKKU_API_Kelompok2\bin\Debug\net8.0\APOTEKKU_API_Kelompok2.pdb
+C:\Users\bimov\Source\Repos\TUBES_KPL_KELOMPOK2.0\APOTEKKU_API_Kelompok2\bin\Debug\net8.0\DotNetEnv.dll
+C:\Users\bimov\Source\Repos\TUBES_KPL_KELOMPOK2.0\APOTEKKU_API_Kelompok2\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\bimov\Source\Repos\TUBES_KPL_KELOMPOK2.0\APOTEKKU_API_Kelompok2\bin\Debug\net8.0\Sprache.dll
+C:\Users\bimov\Source\Repos\TUBES_KPL_KELOMPOK2.0\APOTEKKU_API_Kelompok2\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\bimov\Source\Repos\TUBES_KPL_KELOMPOK2.0\APOTEKKU_API_Kelompok2\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\bimov\Source\Repos\TUBES_KPL_KELOMPOK2.0\APOTEKKU_API_Kelompok2\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\bimov\Source\Repos\TUBES_KPL_KELOMPOK2.0\APOTEKKU_API_Kelompok2\obj\Debug\net8.0\APOTEKKU_API_Kelompok2.csproj.AssemblyReference.cache
+C:\Users\bimov\Source\Repos\TUBES_KPL_KELOMPOK2.0\APOTEKKU_API_Kelompok2\obj\Debug\net8.0\APOTEKKU_API_Kelompok2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bimov\Source\Repos\TUBES_KPL_KELOMPOK2.0\APOTEKKU_API_Kelompok2\obj\Debug\net8.0\APOTEKKU_API_Kelompok2.AssemblyInfoInputs.cache
+C:\Users\bimov\Source\Repos\TUBES_KPL_KELOMPOK2.0\APOTEKKU_API_Kelompok2\obj\Debug\net8.0\APOTEKKU_API_Kelompok2.AssemblyInfo.cs
+C:\Users\bimov\Source\Repos\TUBES_KPL_KELOMPOK2.0\APOTEKKU_API_Kelompok2\obj\Debug\net8.0\APOTEKKU_API_Kelompok2.csproj.CoreCompileInputs.cache
+C:\Users\bimov\Source\Repos\TUBES_KPL_KELOMPOK2.0\APOTEKKU_API_Kelompok2\obj\Debug\net8.0\APOTEKKU_API_Kelompok2.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\bimov\Source\Repos\TUBES_KPL_KELOMPOK2.0\APOTEKKU_API_Kelompok2\obj\Debug\net8.0\APOTEKKU_API_Kelompok2.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\bimov\Source\Repos\TUBES_KPL_KELOMPOK2.0\APOTEKKU_API_Kelompok2\obj\Debug\net8.0\APOTEKKU_API_Kelompok2.sourcelink.json
+C:\Users\bimov\Source\Repos\TUBES_KPL_KELOMPOK2.0\APOTEKKU_API_Kelompok2\obj\Debug\net8.0\scopedcss\bundle\APOTEKKU_API_Kelompok2.styles.css
+C:\Users\bimov\Source\Repos\TUBES_KPL_KELOMPOK2.0\APOTEKKU_API_Kelompok2\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\bimov\Source\Repos\TUBES_KPL_KELOMPOK2.0\APOTEKKU_API_Kelompok2\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\bimov\Source\Repos\TUBES_KPL_KELOMPOK2.0\APOTEKKU_API_Kelompok2\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\bimov\Source\Repos\TUBES_KPL_KELOMPOK2.0\APOTEKKU_API_Kelompok2\obj\Debug\net8.0\staticwebassets\msbuild.APOTEKKU_API_Kelompok2.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\bimov\Source\Repos\TUBES_KPL_KELOMPOK2.0\APOTEKKU_API_Kelompok2\obj\Debug\net8.0\staticwebassets\msbuild.APOTEKKU_API_Kelompok2.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\bimov\Source\Repos\TUBES_KPL_KELOMPOK2.0\APOTEKKU_API_Kelompok2\obj\Debug\net8.0\staticwebassets\msbuild.build.APOTEKKU_API_Kelompok2.props
+C:\Users\bimov\Source\Repos\TUBES_KPL_KELOMPOK2.0\APOTEKKU_API_Kelompok2\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.APOTEKKU_API_Kelompok2.props
+C:\Users\bimov\Source\Repos\TUBES_KPL_KELOMPOK2.0\APOTEKKU_API_Kelompok2\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.APOTEKKU_API_Kelompok2.props
+C:\Users\bimov\Source\Repos\TUBES_KPL_KELOMPOK2.0\APOTEKKU_API_Kelompok2\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\bimov\Source\Repos\TUBES_KPL_KELOMPOK2.0\APOTEKKU_API_Kelompok2\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\bimov\Source\Repos\TUBES_KPL_KELOMPOK2.0\APOTEKKU_API_Kelompok2\obj\Debug\net8.0\APOTEKKU.4194EE33.Up2Date
+C:\Users\bimov\Source\Repos\TUBES_KPL_KELOMPOK2.0\APOTEKKU_API_Kelompok2\obj\Debug\net8.0\APOTEKKU_API_Kelompok2.dll
+C:\Users\bimov\Source\Repos\TUBES_KPL_KELOMPOK2.0\APOTEKKU_API_Kelompok2\obj\Debug\net8.0\refint\APOTEKKU_API_Kelompok2.dll
+C:\Users\bimov\Source\Repos\TUBES_KPL_KELOMPOK2.0\APOTEKKU_API_Kelompok2\obj\Debug\net8.0\APOTEKKU_API_Kelompok2.pdb
+C:\Users\bimov\Source\Repos\TUBES_KPL_KELOMPOK2.0\APOTEKKU_API_Kelompok2\obj\Debug\net8.0\APOTEKKU_API_Kelompok2.genruntimeconfig.cache
+C:\Users\bimov\Source\Repos\TUBES_KPL_KELOMPOK2.0\APOTEKKU_API_Kelompok2\obj\Debug\net8.0\ref\APOTEKKU_API_Kelompok2.dll

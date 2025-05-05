@@ -75,11 +75,19 @@ class Program
                 Console.WriteLine($"\nSelamat datang, {user.Nama}!");
 
                 if (user.Role == "Admin")
-                    await ShowRoleMenu("Admin", GetAdminMenuActions(analisisPenyakit));
+                {
+                    var keuanganService = new KeuanganService();
+                    var keuanganManagement = new KeuanganView(keuanganService);
+                    await ShowRoleMenu("Admin", GetAdminMenuActions(analisisPenyakit, keuanganManagement));
+                }
                 else if (user.Role == "Buyer")
+                {
                     await ShowRoleMenu("Buyer", GetBuyerMenuActions(pembelianObat));
+                }
                 else
+                {
                     Console.WriteLine("Role tidak dikenali.");
+                }
             }
             else
             {
@@ -137,20 +145,20 @@ class Program
         }
     }
 
-    static Dictionary<string, Func<Task>> GetAdminMenuActions(AnalisisPenyakit analisisPenyakit)
+    static Dictionary<string, Func<Task>> GetAdminMenuActions(AnalisisPenyakit analisisPenyakit, KeuanganView keuanganView)
     {
         return new Dictionary<string, Func<Task>>
         {
             { "Lihat Stok Obat", async () => await new StokObatView().MenuStokObat() },
             { "Management Member Apotek", async () => await new ManajemenMemberView().ShowMenu() },
-            { "Management Pemasukan", () => Task.Run(() => Console.WriteLine("Fitur belum diimplementasikan.")) },
-            { "Pengeluaran Apotek", () => Task.Run(() => Console.WriteLine("Fitur belum diimplementasikan.")) },
+            { "Manajemen Keuangan", async () => await Task.Run(() => keuanganView.TampilkanMenuKeuangan()) },
             { "Analisis Penyakit Bulanan", async () => await analisisPenyakit.TampilkanAnalisisAsync() },
             { "Pengecekan Izin Obat", async () => await _pengecekanView.ShowMenu() },
             { "Management Pegawai", async () => await new ManajemenPegawaiView(new PegawaiService()).ShowMenu() },
             { "Sistem Riwayat Pembelian", () => Task.Run(() => Console.WriteLine("Fitur Sistem Riwayat Pembelian belum diimplementasikan.")) },
         };
     }
+
 
     static Dictionary<string, Func<Task>> GetBuyerMenuActions(PembelianObat pembelianObat)
     {
