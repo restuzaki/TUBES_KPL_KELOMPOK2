@@ -1,0 +1,26 @@
+[
+  {
+    "id": "PG001",
+    "nama": "Damai Putra",
+    "jabatan": "Apoteker",
+    "status": 0
+  },
+  {
+    "id": "PG002",
+    "nama": "Valentino Bimo",
+    "jabatan": "Asisten Apoteker",
+    "status": 2
+  },
+  {
+    "id": "PG003",
+    "nama": "Dani",
+    "jabatan": "Manajer Operasional",
+    "status": 1
+  },
+  {
+    "id": "PG004",
+    "nama": "Ahmad Subardjoe",
+    "jabatan": "Kasir",
+    "status": 0
+  }
+]
