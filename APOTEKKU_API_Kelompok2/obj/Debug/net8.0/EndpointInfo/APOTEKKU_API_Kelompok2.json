@@ -767,11 +767,19 @@
             "nullable": true
           },
           "status": {
-            "type": "string",
-            "nullable": true
+            "$ref": "#/components/schemas/PegawaiStatus"
           }
         },
         "additionalProperties": false
+      },
+      "PegawaiStatus": {
+        "enum": [
+          0,
+          1,
+          2
+        ],
+        "type": "integer",
+        "format": "int32"
       },
       "PenyakitAnalisis": {
         "type": "object",

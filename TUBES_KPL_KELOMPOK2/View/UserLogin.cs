@@ -11,25 +11,49 @@ public class UserLogin
 
     public User Login()
     {
+        Console.WriteLine("\n=== Login User ===");
+
         Console.Write("Masukkan nama: ");
-        string nama = Console.ReadLine();
+        string nama = Console.ReadLine()?.Trim();
+
+        
+        if (string.IsNullOrWhiteSpace(nama))
+        {
+            Console.WriteLine("Nama tidak boleh kosong.");
+            return null;
+        }
 
         Console.Write("Masukkan password: ");
-        string password = Console.ReadLine();
+        string password = Console.ReadLine()?.Trim();
+
+        
+        if (string.IsNullOrWhiteSpace(password))
+        {
+            Console.WriteLine("Password tidak boleh kosong.");
+            return null;
+        }
 
         var users = LoadUsers();
 
-        var user = users.FirstOrDefault(u => u.Nama == nama && u.Password == password);
+       
+        var user = users.FirstOrDefault(u =>
+            u.Nama.Equals(nama, StringComparison.OrdinalIgnoreCase) &&
+            u.Password == password
+        );
+
         if (user != null)
         {
-            Console.WriteLine($"Login berhasil. Selamat datang, {user.Nama} dengan role {user.Role}.");
-            return user;
+            Console.WriteLine($"Login berhasil. Selamat datang, {user.Nama} !");
+            
         }
         else
         {
             Console.WriteLine("Nama atau password salah.");
-            return null;
+            
         }
+
+        Console.ReadKey();
+        return user;
     }
 
     private List<User> LoadUsers()
