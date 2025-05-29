@@ -39,9 +39,9 @@ namespace GUI_KPL
             if (isSuccess)
             {
                 MessageBox.Show("Registrasi berhasil.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Login loginForm = new Login();
+                loginForm.Show();
                 this.Hide();
-                
-                // new Login().Show();
             }
             else
             {
@@ -118,8 +118,9 @@ namespace GUI_KPL
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
-            // new Login().Show();
+
+            Login loginForm = new Login();
+            loginForm.Show();
             this.Hide();
         }
 
@@ -128,20 +129,6 @@ namespace GUI_KPL
             MessageBox.Show(message, "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
-        // Optional event handlers (kosong jika tidak dipakai)
-        private void label1_Click(object sender, EventArgs e) { }
-        private void label4_Click(object sender, EventArgs e) { }
-        private void textBox3_TextChanged(object sender, EventArgs e) { }
-        private void label5_Click(object sender, EventArgs e) { }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

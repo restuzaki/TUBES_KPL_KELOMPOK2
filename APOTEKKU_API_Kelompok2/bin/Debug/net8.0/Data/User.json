@@ -82,5 +82,11 @@
     "Nama": "jika",
     "Password": "Jika12",
     "Role": "Buyer"
+  },
+  {
+    "Id": 15,
+    "Nama": "hida",
+    "Password": "Hida",
+    "Role": "Buyer"
   }
 ]

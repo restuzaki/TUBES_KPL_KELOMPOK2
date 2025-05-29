@@ -1,14 +1,14 @@
 ﻿namespace GUI_KPL
 {
-    partial class Register
+    partial class Login
     {
         /// <summary>
-        ///  Required designer variable.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        ///  Clean up any resources being used.
+        /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
@@ -23,30 +23,40 @@
         #region Windows Form Designer generated code
 
         /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Register));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
+            pictureBox1 = new PictureBox();
             label1 = new Label();
             panel1 = new Panel();
             button2 = new Button();
             label5 = new Label();
             button1 = new Button();
             checkBox1 = new CheckBox();
-            textBox3 = new TextBox();
-            label4 = new Label();
             textBox2 = new TextBox();
             label3 = new Label();
             textBox1 = new TextBox();
             label2 = new Label();
-            pictureBox1 = new PictureBox();
             tableLayoutPanel1 = new TableLayoutPanel();
-            panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            panel1.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Dock = DockStyle.Fill;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(353, 4);
+            pictureBox1.Margin = new Padding(3, 4, 3, 3);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(426, 455);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 2;
+            pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -55,9 +65,9 @@
             label1.ForeColor = Color.YellowGreen;
             label1.Location = new Point(29, 56);
             label1.Name = "label1";
-            label1.Size = new Size(282, 46);
+            label1.Size = new Size(169, 46);
             label1.TabIndex = 0;
-            label1.Text = "Selamat Datang, ";
+            label1.Text = "Apotekku";
             // 
             // panel1
             // 
@@ -66,8 +76,6 @@
             panel1.Controls.Add(label5);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(checkBox1);
-            panel1.Controls.Add(textBox3);
-            panel1.Controls.Add(label4);
             panel1.Controls.Add(textBox2);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(textBox1);
@@ -76,7 +84,7 @@
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(3, 3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(352, 503);
+            panel1.Size = new Size(344, 456);
             panel1.TabIndex = 1;
             // 
             // button2
@@ -85,23 +93,22 @@
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Yu Gothic Medium", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button2.ForeColor = Color.YellowGreen;
-            button2.Location = new Point(183, 430);
+            button2.Location = new Point(183, 357);
             button2.Name = "button2";
-            button2.Size = new Size(66, 31);
+            button2.Size = new Size(94, 31);
             button2.TabIndex = 9;
-            button2.Text = "Login";
+            button2.Text = "Register";
             button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Yu Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(40, 437);
+            label5.Location = new Point(40, 364);
             label5.Name = "label5";
             label5.Size = new Size(148, 20);
             label5.TabIndex = 2;
-            label5.Text = "Sudah Punya Akun?";
+            label5.Text = "Belum Punya Akun?";
             // 
             // button1
             // 
@@ -111,49 +118,26 @@
             button1.FlatStyle = FlatStyle.Popup;
             button1.Font = new Font("Yu Gothic Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(38, 382);
+            button1.Location = new Point(38, 309);
             button1.Name = "button1";
             button1.Size = new Size(212, 38);
             button1.TabIndex = 8;
-            button1.Text = "Register";
+            button1.Text = "Login";
             button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            button1.Click += button1_Click_1;
             // 
             // checkBox1
             // 
             checkBox1.AutoSize = true;
             checkBox1.Cursor = Cursors.Hand;
             checkBox1.Font = new Font("Yu Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            checkBox1.Location = new Point(165, 350);
+            checkBox1.Location = new Point(165, 275);
             checkBox1.Name = "checkBox1";
             checkBox1.Size = new Size(158, 26);
             checkBox1.TabIndex = 7;
             checkBox1.Text = "Show Password";
             checkBox1.UseVisualStyleBackColor = true;
             checkBox1.CheckedChanged += checkBox1_CheckedChanged;
-            // 
-            // textBox3
-            // 
-            textBox3.BackColor = SystemColors.ScrollBar;
-            textBox3.BorderStyle = BorderStyle.FixedSingle;
-            textBox3.Font = new Font("Yu Gothic Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            textBox3.Location = new Point(29, 310);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(237, 35);
-            textBox3.TabIndex = 6;
-            textBox3.UseSystemPasswordChar = true;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Yu Gothic Medium", 10F, FontStyle.Bold);
-            label4.ForeColor = SystemColors.ControlDarkDark;
-            label4.Location = new Point(29, 285);
-            label4.Name = "label4";
-            label4.Size = new Size(172, 22);
-            label4.TabIndex = 5;
-            label4.Text = "Confrim Password";
-            label4.TextAlign = ContentAlignment.TopRight;
             // 
             // textBox2
             // 
@@ -201,20 +185,9 @@
             label2.Text = "Username";
             label2.TextAlign = ContentAlignment.TopRight;
             // 
-            // pictureBox1
-            // 
-            pictureBox1.Dock = DockStyle.Fill;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(361, 4);
-            pictureBox1.Margin = new Padding(3, 4, 3, 3);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(436, 502);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 2;
-            pictureBox1.TabStop = false;
-            // 
             // tableLayoutPanel1
             // 
+            tableLayoutPanel1.BackColor = Color.YellowGreen;
             tableLayoutPanel1.ColumnCount = 2;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 44.7980423F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 55.2019577F));
@@ -226,42 +199,38 @@
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 93.650795F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 6.34920645F));
-            tableLayoutPanel1.Size = new Size(800, 509);
-            tableLayoutPanel1.TabIndex = 2;
+            tableLayoutPanel1.Size = new Size(782, 462);
+            tableLayoutPanel1.TabIndex = 3;
             // 
-            // Register
+            // Login
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.YellowGreen;
-            ClientSize = new Size(800, 509);
+            ClientSize = new Size(782, 462);
             Controls.Add(tableLayoutPanel1);
-            Name = "Register";
+            Name = "Login";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Aplikasi Apotek";
-            Load += Register_Load;
+            Text = "Login";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             tableLayoutPanel1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
 
+        private PictureBox pictureBox1;
         private Label label1;
         private Panel panel1;
-        private Label label2;
-        private TextBox textBox1;
+        private Button button2;
+        private Label label5;
+        private Button button1;
+        private CheckBox checkBox1;
         private TextBox textBox2;
         private Label label3;
-        private TextBox textBox3;
-        private Label label4;
-        private CheckBox checkBox1;
-        private Button button1;
-        private Label label5;
-        private Button button2;
-        private PictureBox pictureBox1;
+        private TextBox textBox1;
+        private Label label2;
         private TableLayoutPanel tableLayoutPanel1;
     }
 }
