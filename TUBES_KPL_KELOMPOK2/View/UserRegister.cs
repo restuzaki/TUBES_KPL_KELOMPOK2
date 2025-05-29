@@ -2,15 +2,15 @@
 using System.Net.Http;
 using System.Text;
 using System.Text.Json;
-using Apotekku_API.Models;
 using System.Linq;
+using Apotekku_API.Models;
 
 namespace TUBES_KPL_KELOMPOK2.Services
 {
     public class UserRegister
     {
-        private static readonly HttpClient client = new HttpClient();
-        private readonly string apiUrl = "http://localhost:5193/api/User/register";
+        private static readonly HttpClient Client = new();
+        private const string ApiUrl = "http://localhost:5193/api/User/register";
 
         public User? Register()
         {
@@ -30,9 +30,6 @@ namespace TUBES_KPL_KELOMPOK2.Services
                 Console.Write("Password: ");
                 string password = Console.ReadLine();
 
-                //Console.WriteLine("Password yang dimasukkan: " + password);
-
-                
                 if (string.IsNullOrWhiteSpace(password))
                 {
                     Console.WriteLine("Password tidak boleh kosong.");
@@ -51,16 +48,15 @@ namespace TUBES_KPL_KELOMPOK2.Services
                     return null;
                 }
 
-                
                 Console.WriteLine("Password valid.");
 
-                string role = "Buyer";
-                var user = new User(nama, password, role);
+                var user = new User(nama, password, "Buyer");
 
                 string jsonData = JsonSerializer.Serialize(user);
                 var content = new StringContent(jsonData, Encoding.UTF8, "application/json");
 
-                var response = client.PostAsync(apiUrl, content).Result;
+                var response = Client.PostAsync(ApiUrl, content).Result;
+
                 if (response.IsSuccessStatusCode)
                 {
                     Console.WriteLine("Registrasi berhasil.");
@@ -75,7 +71,6 @@ namespace TUBES_KPL_KELOMPOK2.Services
                 Console.WriteLine($"Terjadi kesalahan saat register: {ex.Message}");
             }
 
-           
             Console.ReadKey();
             return null;
         }
