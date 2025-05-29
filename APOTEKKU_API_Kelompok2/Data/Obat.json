@@ -86,5 +86,13 @@
     "harga": 0,
     "kadaluarsa": "2026-05-05",
     "stok": 24
+  },
+  {
+    "id": "OB019",
+    "nama": "Balsem",
+    "status": 0,
+    "harga": 0,
+    "kadaluarsa": "2025-10-09",
+    "stok": 90
   }
 ]

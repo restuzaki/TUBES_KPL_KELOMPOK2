@@ -22,5 +22,11 @@
     "nama": "Ahmad Subardjoe",
     "jabatan": "Kasir",
     "status": 0
+  },
+  {
+    "id": "PG009",
+    "nama": "Yudha",
+    "jabatan": "CEO",
+    "status": 0
   }
 ]

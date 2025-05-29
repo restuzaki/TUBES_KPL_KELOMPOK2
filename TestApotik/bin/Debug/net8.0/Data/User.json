@@ -64,5 +64,17 @@
     "Nama": "yoga",
     "Password": "Yoga",
     "Role": "Buyer"
+  },
+  {
+    "Id": 12,
+    "Nama": "aji",
+    "Password": "ajiGanteng",
+    "Role": "Buyer"
+  },
+  {
+    "Id": 13,
+    "Nama": "raihan",
+    "Password": "Raihan1",
+    "Role": "Buyer"
   }
 ]
