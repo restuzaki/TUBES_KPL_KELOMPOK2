@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APOTEKKU_API_Kelompok2", "A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApotik", "TestApotik\TestApotik.csproj", "{6D383023-B82E-4A2C-A687-B61CE0031F92}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI_KPL", "GUI_KPL\GUI_KPL.csproj", "{2B2DC16C-A8BE-48BD-A4E5-ABB297991D42}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +28,10 @@ Global
 		{6D383023-B82E-4A2C-A687-B61CE0031F92}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D383023-B82E-4A2C-A687-B61CE0031F92}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D383023-B82E-4A2C-A687-B61CE0031F92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B2DC16C-A8BE-48BD-A4E5-ABB297991D42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B2DC16C-A8BE-48BD-A4E5-ABB297991D42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B2DC16C-A8BE-48BD-A4E5-ABB297991D42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B2DC16C-A8BE-48BD-A4E5-ABB297991D42}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
