@@ -88,6 +88,7 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(344, 456);
             panel1.TabIndex = 1;
+            
             // 
             // button2
             // 

@@ -1,8 +1,6 @@
 ﻿using Apotekku_API.Models;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using TUBES_KPL_KELOMPOK2.Services;
 
@@ -10,101 +8,100 @@ namespace TUBES_KPL_KELOMPOK2.View
 {
     public class ManajemenPegawaiView
     {
-        private readonly PegawaiService _pegawaiService;
-        private readonly PegawaiStateManager _stateManager;
+        private readonly PegawaiService _layananPegawai;
+        private readonly PegawaiStateManager _pengelolaStatus;
 
-        public ManajemenPegawaiView(PegawaiService pegawaiService)
+        public ManajemenPegawaiView(PegawaiService layananPegawai)
         {
-            _pegawaiService = pegawaiService;
-            _stateManager = new PegawaiStateManager();
+            _layananPegawai = layananPegawai;
+            _pengelolaStatus = new PegawaiStateManager();
         }
 
-        public async Task ShowMenu()
+        public async Task TampilkanMenuAsync()
         {
             while (true)
             {
                 Console.Clear();
-                Console.WriteLine("=== MANAJEMEN PEGAWAI ===");
-                Console.WriteLine("1. Cek Status Pegawai by ID");
-                Console.WriteLine("2. Lihat Semua Pegawai");
+                Console.WriteLine("=== MENU MANAJEMEN PEGAWAI ===");
+                Console.WriteLine("1. Cek Status Pegawai berdasarkan ID");
+                Console.WriteLine("2. Lihat Seluruh Data Pegawai");
                 Console.WriteLine("3. Tambah Pegawai");
-                Console.WriteLine("4. Update Pegawai");
+                Console.WriteLine("4. Ubah Data Pegawai");
                 Console.WriteLine("5. Hapus Pegawai");
                 Console.WriteLine("6. Kembali");
-                Console.Write("Pilih: ");
+                Console.Write("Pilihan Anda: ");
 
                 switch (Console.ReadLine())
                 {
                     case "1":
-                        await CheckSinglePegawai();
+                        await CekPegawaiByIdAsync();
                         break;
                     case "2":
-                        await CheckAllPegawai();
+                        await TampilkanSeluruhPegawaiAsync();
                         break;
                     case "3":
-                        await CreatePegawai();
+                        await TambahPegawaiAsync();
                         break;
                     case "4":
-                        await UpdatePegawai();
+                        await UbahPegawaiAsync();
                         break;
                     case "5":
-                        await DeletePegawai();
+                        await HapusPegawaiAsync();
                         break;
                     case "6":
                         return;
                     default:
-                        Console.WriteLine("Input tidak valid!");
+                        Console.WriteLine("❌ Input tidak valid!");
                         break;
                 }
 
-                Console.WriteLine("\nTekan sembarang tombol...");
+                Console.WriteLine("\nTekan sembarang tombol untuk melanjutkan...");
                 Console.ReadKey();
             }
         }
 
-        private async Task CheckSinglePegawai()
+        private async Task CekPegawaiByIdAsync()
         {
             Console.Write("\nMasukkan ID Pegawai: ");
             var id = Console.ReadLine();
 
             try
             {
-                var pegawai = await _pegawaiService.GetPegawaiByIdAsync(id);
+                var pegawai = await _layananPegawai.AmbilPegawaiByIdAsync(id);
                 if (pegawai != null)
                 {
-                    _stateManager.TampilkanStatus(pegawai);
+                    _pengelolaStatus.TampilkanStatus(pegawai);
                 }
                 else
                 {
-                    Console.WriteLine("Pegawai tidak ditemukan!");
+                    Console.WriteLine("❌ Pegawai tidak ditemukan.");
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error: {ex.Message}");
+                Console.WriteLine($"⚠️ Error: {ex.Message}");
             }
         }
 
-        private async Task CheckAllPegawai()
+        private async Task TampilkanSeluruhPegawaiAsync()
         {
             try
             {
-                var allPegawai = await _pegawaiService.GetAllPegawaiAsync();
-                if (allPegawai == null || allPegawai.Count == 0)
+                var daftarPegawai = await _layananPegawai.AmbilSemuaPegawaiAsync();
+                if (daftarPegawai == null || daftarPegawai.Count == 0)
                 {
-                    Console.WriteLine("Tidak ada data pegawai");
+                    Console.WriteLine("⚠️ Tidak ada data pegawai.");
                     return;
                 }
 
-                Console.WriteLine("\nDAFTAR PEGAWAI:");
-                Console.WriteLine("==========================================");
-                Console.WriteLine("| ID    | Nama Pegawai      | Status        |");
-                Console.WriteLine("==========================================");
+                Console.WriteLine("\n=== DAFTAR PEGAWAI ===");
+                Console.WriteLine("============================================");
+                Console.WriteLine("| ID    | Nama Pegawai      | Status       |");
+                Console.WriteLine("============================================");
 
-                foreach (var pegawai in allPegawai)
+                foreach (var pegawai in daftarPegawai)
                 {
-                    Console.Write($"| {pegawai.id,-5} | {pegawai.nama,-16} | ");
-
+                    Console.Write($"| {pegawai.id,-5} | {pegawai.nama,-18} | ");
                     switch (pegawai.status)
                     {
                         case PegawaiStatus.Aktif:
@@ -122,108 +119,97 @@ namespace TUBES_KPL_KELOMPOK2.View
                     Console.ResetColor();
                 }
 
-                Console.WriteLine("==========================================");
+                Console.WriteLine("============================================");
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error: {ex.Message}");
+                Console.WriteLine($"⚠️ Error: {ex.Message}");
             }
         }
 
-        // Create Pegawai
-        private async Task CreatePegawai()
+        private async Task TambahPegawaiAsync()
         {
-            Console.WriteLine("\n=== TAMBAH PEGAWAI ===");
-            Console.Write("Masukkan ID Pegawai: ");
+            Console.WriteLine("\n=== TAMBAH DATA PEGAWAI ===");
+            Console.Write("ID Pegawai: ");
             var id = Console.ReadLine();
 
-            Console.Write("Masukkan Nama Pegawai: ");
+            Console.Write("Nama Pegawai: ");
             var nama = Console.ReadLine();
 
-            Console.Write("Masukkan Jabatan Pegawai: ");
+            Console.Write("Jabatan Pegawai: ");
             var jabatan = Console.ReadLine();
 
-            Console.Write("Masukkan Status Pegawai (Aktif, Cuti, TidakAktif): ");
-            var status = Console.ReadLine();
+            Console.Write("Status Pegawai (Aktif, Cuti, TidakAktif): ");
+            var statusInput = Console.ReadLine();
+
+            var pegawaiBaru = new Pegawai
+            {
+                id = id,
+                nama = nama,
+                jabatan = jabatan,
+                status = Enum.TryParse(statusInput, true, out PegawaiStatus status) ? status : PegawaiStatus.Aktif
+            };
 
             try
             {
-                var pegawai = new Pegawai
-                {
-                    id = id,
-                    nama = nama,
-                    jabatan = jabatan,
-                    status = Enum.TryParse(status, out PegawaiStatus parsedStatus) ? parsedStatus : PegawaiStatus.Aktif
-                };
-
-                await _pegawaiService.CreatePegawaiAsync(pegawai);
-                Console.WriteLine("Pegawai berhasil ditambahkan!");
+                await _layananPegawai.TambahPegawaiAsync(pegawaiBaru);
+                Console.WriteLine("✅ Pegawai berhasil ditambahkan.");
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error: {ex.Message}");
+                Console.WriteLine($"⚠️ Error: {ex.Message}");
             }
         }
 
-        // Update Pegawai
-        private async Task UpdatePegawai()
+        private async Task UbahPegawaiAsync()
         {
-            Console.Write("\nMasukkan ID Pegawai yang ingin diupdate: ");
+            Console.Write("\nMasukkan ID Pegawai yang ingin diubah: ");
             var id = Console.ReadLine();
 
             try
             {
-                var pegawai = await _pegawaiService.GetPegawaiByIdAsync(id);
-                if (pegawai != null)
+                var pegawai = await _layananPegawai.AmbilPegawaiByIdAsync(id);
+                if (pegawai == null)
                 {
-                    Console.WriteLine($"Nama Pegawai: {pegawai.nama} (current)");
-                    Console.Write("Masukkan Nama Pegawai baru: ");
-                    pegawai.nama = Console.ReadLine();
-
-                    Console.WriteLine($"Jabatan Pegawai: {pegawai.jabatan} (current)");
-                    Console.Write("Masukkan Jabatan Pegawai baru: ");
-                    pegawai.jabatan = Console.ReadLine();
-
-                    Console.WriteLine($"Status Pegawai: {pegawai.status} (current)");
-                    Console.Write("Masukkan Status Pegawai baru (Aktif, Cuti, Nonaktif): ");
-                    var status = Console.ReadLine();
-                    pegawai.status = Enum.TryParse(status, out PegawaiStatus parsedStatus) ? parsedStatus : pegawai.status;
-
-                    await _pegawaiService.UpdatePegawaiAsync(pegawai);
-                    Console.WriteLine("Pegawai berhasil diupdate!");
+                    Console.WriteLine("❌ Pegawai tidak ditemukan.");
+                    return;
                 }
-                else
-                {
-                    Console.WriteLine("Pegawai tidak ditemukan!");
-                }
+
+                Console.WriteLine($"Nama Saat Ini: {pegawai.nama}");
+                Console.Write("Nama Baru: ");
+                pegawai.nama = Console.ReadLine();
+
+                Console.WriteLine($"Jabatan Saat Ini: {pegawai.jabatan}");
+                Console.Write("Jabatan Baru: ");
+                pegawai.jabatan = Console.ReadLine();
+
+                Console.WriteLine($"Status Saat Ini: {pegawai.status}");
+                Console.Write("Status Baru (Aktif, Cuti, TidakAktif): ");
+                var statusBaru = Console.ReadLine();
+                pegawai.status = Enum.TryParse(statusBaru, true, out PegawaiStatus statusParsed) ? statusParsed : pegawai.status;
+
+                await _layananPegawai.PerbaruiPegawaiAsync(pegawai);
+                Console.WriteLine("✅ Data pegawai berhasil diperbarui.");
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error: {ex.Message}");
+                Console.WriteLine($"⚠️ Error: {ex.Message}");
             }
         }
 
-        // Delete Pegawai
-        private async Task DeletePegawai()
+        private async Task HapusPegawaiAsync()
         {
             Console.Write("\nMasukkan ID Pegawai yang ingin dihapus: ");
             var id = Console.ReadLine();
 
             try
             {
-                var result = await _pegawaiService.DeletePegawaiAsync(id);
-                if (result)
-                {
-                    Console.WriteLine("Pegawai berhasil dihapus!");
-                }
-                else
-                {
-                    Console.WriteLine("Pegawai tidak ditemukan!");
-                }
+                var berhasil = await _layananPegawai.HapusPegawaiAsync(id);
+                Console.WriteLine(berhasil ? "✅ Pegawai berhasil dihapus." : "❌ Pegawai tidak ditemukan.");
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error: {ex.Message}");
+                Console.WriteLine($"⚠️ Error: {ex.Message}");
             }
         }
     }

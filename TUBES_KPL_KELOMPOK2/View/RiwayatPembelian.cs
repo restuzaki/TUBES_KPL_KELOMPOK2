@@ -23,9 +23,6 @@ namespace TUBES_KPL_KELOMPOK2.View
 
             Tanggal = tanggal;
             Obats = obats;
-
-            if (Tanggal != tanggal || Obats != obats)
-                throw new InvalidOperationException("Objek RiwayatPembelian gagal dibuat dengan benar.");
         }
 
         public void ValidateState()

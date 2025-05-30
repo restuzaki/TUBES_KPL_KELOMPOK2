@@ -129,6 +129,6 @@ namespace GUI_KPL
             MessageBox.Show(message, "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
-        
+
     }
 }

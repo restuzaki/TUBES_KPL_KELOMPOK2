@@ -130,7 +130,7 @@ class Program
                 Console.Clear();
                 await menuActions[keyMap[input]]();
 
-                
+
                 if (keyMap[input] != "ChatBot")
                 {
                     Console.WriteLine("\nTekan sembarang tombol untuk melanjutkan...");
@@ -153,9 +153,9 @@ class Program
             { "Management Member Apotek", async () => await new ManajemenMemberView().ShowMenu() },
             { "Manajemen Keuangan", async () => await Task.Run(() => keuanganView.TampilkanMenuKeuangan()) },
             { "Analisis Penyakit Bulanan", async () => await analisisPenyakit.TampilkanAnalisisAsync() },
-            { "Pengecekan Izin Obat", async () => await _pengecekanView.ShowMenu() },
-            { "Management Pegawai", async () => await new ManajemenPegawaiView(new PegawaiService()).ShowMenu() },
-       
+            { "Pengecekan Izin Obat", async () => await _pengecekanView.TampilkanMenuAsync() },
+            { "Management Pegawai", async () => await new ManajemenPegawaiView(new PegawaiService()).TampilkanMenuAsync() },
+
         };
     }
 
