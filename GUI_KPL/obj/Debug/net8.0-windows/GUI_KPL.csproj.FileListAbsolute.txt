@@ -38,3 +38,5 @@ C:\Users\damai\TUBES_KPL_KELOMPOK2\GUI_KPL\bin\Debug\net8.0-windows\APOTEKKU_API
 C:\Users\damai\TUBES_KPL_KELOMPOK2\GUI_KPL\obj\Debug\net8.0-windows\GUI_KPL.csproj.AssemblyReference.cache
 C:\Users\damai\TUBES_KPL_KELOMPOK2\GUI_KPL\obj\Debug\net8.0-windows\GUI_KPL.csproj.Up2Date
 C:\Users\damai\TUBES_KPL_KELOMPOK2\GUI_KPL\obj\Debug\net8.0-windows\GUI_KPL.Login.resources
+C:\Users\damai\TUBES_KPL_KELOMPOK2\GUI_KPL\obj\Debug\net8.0-windows\GUI_KPL.MenuUser.resources
+C:\Users\damai\TUBES_KPL_KELOMPOK2\GUI_KPL\obj\Debug\net8.0-windows\GUI_KPL.MenuAdmin.resources

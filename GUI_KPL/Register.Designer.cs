@@ -233,7 +233,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.YellowGreen;
+            BackColor = Color.Silver;
             ClientSize = new Size(800, 509);
             Controls.Add(tableLayoutPanel1);
             Name = "Register";
