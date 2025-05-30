@@ -39,6 +39,9 @@ C:\Users\damai\TUBES_KPL_KELOMPOK2\GUI_KPL\obj\Debug\net8.0-windows\GUI_KPL.cspr
 C:\Users\damai\TUBES_KPL_KELOMPOK2\GUI_KPL\obj\Debug\net8.0-windows\GUI_KPL.csproj.Up2Date
 C:\Users\damai\TUBES_KPL_KELOMPOK2\GUI_KPL\obj\Debug\net8.0-windows\GUI_KPL.Login.resources
 <<<<<<< HEAD
+C:\Users\damai\TUBES_KPL_KELOMPOK2\GUI_KPL\obj\Debug\net8.0-windows\GUI_KPL.MenuUser.resources
+C:\Users\damai\TUBES_KPL_KELOMPOK2\GUI_KPL\obj\Debug\net8.0-windows\GUI_KPL.MenuAdmin.resources
+=======
 C:\Users\macbookpro\TUBES_KPL_KELOMPOK2\GUI_KPL\bin\Debug\net8.0-windows\appsettings.Development.json
 C:\Users\macbookpro\TUBES_KPL_KELOMPOK2\GUI_KPL\bin\Debug\net8.0-windows\appsettings.json
 C:\Users\macbookpro\TUBES_KPL_KELOMPOK2\GUI_KPL\bin\Debug\net8.0-windows\Data\MemberData.json
@@ -80,7 +83,6 @@ C:\Users\macbookpro\TUBES_KPL_KELOMPOK2\GUI_KPL\obj\Debug\net8.0-windows\refint\
 C:\Users\macbookpro\TUBES_KPL_KELOMPOK2\GUI_KPL\obj\Debug\net8.0-windows\GUI_KPL.pdb
 C:\Users\macbookpro\TUBES_KPL_KELOMPOK2\GUI_KPL\obj\Debug\net8.0-windows\GUI_KPL.genruntimeconfig.cache
 C:\Users\macbookpro\TUBES_KPL_KELOMPOK2\GUI_KPL\obj\Debug\net8.0-windows\ref\GUI_KPL.dll
-=======
 C:\Users\ASUS\source\repos\TUBES_KPL_KELOMPOK2\GUI_KPL\bin\Debug\net8.0-windows\appsettings.Development.json
 C:\Users\ASUS\source\repos\TUBES_KPL_KELOMPOK2\GUI_KPL\bin\Debug\net8.0-windows\appsettings.json
 C:\Users\ASUS\source\repos\TUBES_KPL_KELOMPOK2\GUI_KPL\bin\Debug\net8.0-windows\Data\MemberData.json
@@ -124,3 +126,8 @@ C:\Users\ASUS\source\repos\TUBES_KPL_KELOMPOK2\GUI_KPL\obj\Debug\net8.0-windows\
 C:\Users\ASUS\source\repos\TUBES_KPL_KELOMPOK2\GUI_KPL\obj\Debug\net8.0-windows\ref\GUI_KPL.dll
 C:\Users\ASUS\source\repos\TUBES_KPL_KELOMPOK2\GUI_KPL\obj\Debug\net8.0-windows\GUI_KPL.ManajemenPegawai.resources
 >>>>>>> db870c9b59c52527d279ae3f4240d108fae91040
+>>>>>>> 801b1a614364db1a43676f2e50271187838322bb
+C:\Users\damai\TUBES_KPL_KELOMPOK2\GUI_KPL\obj\Debug\net8.0-windows\GUI_KPL.BacaResep.resources
+C:\Users\damai\TUBES_KPL_KELOMPOK2\GUI_KPL\obj\Debug\net8.0-windows\GUI_KPL.CekIzinObat.resources
+C:\Users\damai\TUBES_KPL_KELOMPOK2\GUI_KPL\obj\Debug\net8.0-windows\GUI_KPL.ManajemenPegawai.resources
+C:\Users\damai\TUBES_KPL_KELOMPOK2\GUI_KPL\obj\Debug\net8.0-windows\GUI_KPL.RiwayatPembelian.resources

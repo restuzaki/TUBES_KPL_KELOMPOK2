@@ -48,6 +48,7 @@
             // 
             // pictureBox1
             // 
+            pictureBox1.BackColor = Color.Silver;
             pictureBox1.Dock = DockStyle.Fill;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(353, 4);
@@ -57,6 +58,7 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // label1
             // 
@@ -86,7 +88,7 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(344, 456);
             panel1.TabIndex = 1;
-            panel1.Paint += panel1_Paint;
+            
             // 
             // button2
             // 
@@ -188,7 +190,7 @@
             // 
             // tableLayoutPanel1
             // 
-            tableLayoutPanel1.BackColor = Color.YellowGreen;
+            tableLayoutPanel1.BackColor = Color.Silver;
             tableLayoutPanel1.ColumnCount = 2;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 44.7980423F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 55.2019577F));
@@ -212,6 +214,7 @@
             Name = "Login";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
+            Load += Login_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

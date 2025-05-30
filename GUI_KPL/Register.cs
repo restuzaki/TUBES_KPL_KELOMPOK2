@@ -129,13 +129,6 @@ namespace GUI_KPL
             MessageBox.Show(message, "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
-<<<<<<< HEAD
-        private void label1_Click(object sender, EventArgs e)
-=======
-        private void pictureBox1_Click(object sender, EventArgs e)
->>>>>>> db870c9b59c52527d279ae3f4240d108fae91040
-        {
 
-        }
     }
 }

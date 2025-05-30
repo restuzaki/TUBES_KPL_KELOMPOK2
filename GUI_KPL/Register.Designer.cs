@@ -59,7 +59,7 @@
             label1.Size = new Size(449, 72);
             label1.TabIndex = 0;
             label1.Text = "Selamat Datang, ";
-            label1.Click += label1_Click;
+            
             // 
             // panel1
             // 
@@ -225,7 +225,7 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
+            
             // 
             // tableLayoutPanel1
             // 
@@ -248,8 +248,11 @@
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.YellowGreen;
+
+            BackColor = Color.Silver;
+
             ClientSize = new Size(1300, 814);
+
             Controls.Add(tableLayoutPanel1);
             Margin = new Padding(5, 5, 5, 5);
             Name = "Register";

@@ -45,8 +45,24 @@ namespace GUI_KPL
             if (user != null)
             {
                 MessageBox.Show($"Login berhasil. Selamat datang, {user.Nama}!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                // (ini nanti kemenu home sesuai dia user atau apa)
+
+                if (user.Role == "Buyer")
+                {
+                    
+                    MenuUser userMenu = new MenuUser(user);
+                    userMenu.Show();
+                }
+                else if (user.Role == "Admin")
+                {
+
+                    MenuAdmin menuAdmin= new MenuAdmin(user);
+                    menuAdmin.Show();
+                }
+
+
+                this.Hide();
             }
+
             else
             {
                 MessageBox.Show("Nama atau password salah.", "Login Gagal", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -90,7 +106,12 @@ namespace GUI_KPL
 
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
