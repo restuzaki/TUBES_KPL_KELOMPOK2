@@ -2,110 +2,130 @@
 using System.Text.Json;
 using System.Text;
 
+/// <summary>
+/// Layanan untuk mengelola data pegawai dari API.
+/// </summary>
 public class PegawaiService
 {
-    private readonly HttpClient _client;
-    private readonly JsonSerializerOptions _jsonOptions;
+    private readonly HttpClient _klienHttp;
+    private readonly JsonSerializerOptions _opsiJson;
 
     public PegawaiService()
     {
-        _client = new HttpClient();
-        _client.BaseAddress = new Uri("http://localhost:5193/api/");
-        _jsonOptions = new JsonSerializerOptions
+        _klienHttp = new HttpClient
+        {
+            BaseAddress = new Uri("http://localhost:5193/api/")
+        };
+
+        _opsiJson = new JsonSerializerOptions
         {
             PropertyNameCaseInsensitive = true
         };
     }
 
-    public async Task<List<Pegawai>> GetAllPegawaiAsync()
+    /// <summary>
+    /// Mengambil semua data pegawai.
+    /// </summary>
+    public async Task<List<Pegawai>> AmbilSemuaPegawaiAsync()
     {
         try
         {
-            var response = await _client.GetAsync("pegawai");
-            response.EnsureSuccessStatusCode();
+            var respon = await _klienHttp.GetAsync("pegawai");
+            respon.EnsureSuccessStatusCode();
 
-            var json = await response.Content.ReadAsStringAsync();
-            var data = JsonSerializer.Deserialize<List<Pegawai>>(json, _jsonOptions);
-            return data ?? new List<Pegawai>();
+            var json = await respon.Content.ReadAsStringAsync();
+            return JsonSerializer.Deserialize<List<Pegawai>>(json, _opsiJson) ?? new List<Pegawai>();
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"[ERROR] Gagal mengambil data pegawai: {ex.Message}");
+            Console.WriteLine($"[KESALAHAN] Gagal mengambil data pegawai: {ex.Message}");
             return new List<Pegawai>();
         }
     }
 
-    public async Task<Pegawai?> GetPegawaiByIdAsync(string id)
+    /// <summary>
+    /// Mengambil data pegawai berdasarkan ID.
+    /// </summary>
+    public async Task<Pegawai?> AmbilPegawaiByIdAsync(string id)
     {
         try
         {
             if (string.IsNullOrWhiteSpace(id))
                 throw new ArgumentException("ID tidak boleh kosong");
 
-            var response = await _client.GetAsync($"pegawai/{id}");
-            if (!response.IsSuccessStatusCode)
+            var respon = await _klienHttp.GetAsync($"pegawai/{id}");
+            if (!respon.IsSuccessStatusCode)
             {
-                Console.WriteLine($"[WARNING] Pegawai dengan ID {id} tidak ditemukan");
+                Console.WriteLine($"[PERINGATAN] Pegawai dengan ID {id} tidak ditemukan");
                 return null;
             }
 
-            var json = await response.Content.ReadAsStringAsync();
-            return JsonSerializer.Deserialize<Pegawai>(json, _jsonOptions);
+            var json = await respon.Content.ReadAsStringAsync();
+            return JsonSerializer.Deserialize<Pegawai>(json, _opsiJson);
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"[ERROR] Gagal mengambil data pegawai: {ex.Message}");
+            Console.WriteLine($"[KESALAHAN] Gagal mengambil data pegawai: {ex.Message}");
             return null;
         }
     }
 
-    public async Task CreatePegawaiAsync(Pegawai pegawai)
+    /// <summary>
+    /// Menambahkan data pegawai baru.
+    /// </summary>
+    public async Task TambahPegawaiAsync(Pegawai pegawai)
     {
         try
         {
             if (pegawai == null)
-                throw new ArgumentNullException(nameof(pegawai), "Data pegawai tidak boleh null");
+                throw new ArgumentNullException(nameof(pegawai), "Data pegawai tidak boleh kosong");
 
-            var jsonContent = new StringContent(JsonSerializer.Serialize(pegawai), Encoding.UTF8, "application/json");
-            var response = await _client.PostAsync("pegawai", jsonContent);
-            response.EnsureSuccessStatusCode();
+            var isiJson = new StringContent(JsonSerializer.Serialize(pegawai), Encoding.UTF8, "application/json");
+            var respon = await _klienHttp.PostAsync("pegawai", isiJson);
+            respon.EnsureSuccessStatusCode();
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"[ERROR] Gagal membuat data pegawai: {ex.Message}");
+            Console.WriteLine($"[KESALAHAN] Gagal menambahkan pegawai: {ex.Message}");
         }
     }
 
-    public async Task UpdatePegawaiAsync(Pegawai pegawai)
+    /// <summary>
+    /// Memperbarui data pegawai.
+    /// </summary>
+    public async Task PerbaruiPegawaiAsync(Pegawai pegawai)
     {
         try
         {
             if (pegawai == null || string.IsNullOrWhiteSpace(pegawai.id))
                 throw new ArgumentException("Data pegawai atau ID tidak valid");
 
-            var jsonContent = new StringContent(JsonSerializer.Serialize(pegawai), Encoding.UTF8, "application/json");
-            var response = await _client.PutAsync($"pegawai/{pegawai.id}", jsonContent);
-            response.EnsureSuccessStatusCode();
+            var isiJson = new StringContent(JsonSerializer.Serialize(pegawai), Encoding.UTF8, "application/json");
+            var respon = await _klienHttp.PutAsync($"pegawai/{pegawai.id}", isiJson);
+            respon.EnsureSuccessStatusCode();
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"[ERROR] Gagal memperbarui data pegawai: {ex.Message}");
+            Console.WriteLine($"[KESALAHAN] Gagal memperbarui pegawai: {ex.Message}");
         }
     }
 
-    public async Task<bool> DeletePegawaiAsync(string id)
+    /// <summary>
+    /// Menghapus data pegawai berdasarkan ID.
+    /// </summary>
+    public async Task<bool> HapusPegawaiAsync(string id)
     {
         try
         {
             if (string.IsNullOrWhiteSpace(id))
                 throw new ArgumentException("ID pegawai tidak boleh kosong");
 
-            var response = await _client.DeleteAsync($"pegawai/{id}");
-            return response.IsSuccessStatusCode;
+            var respon = await _klienHttp.DeleteAsync($"pegawai/{id}");
+            return respon.IsSuccessStatusCode;
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"[ERROR] Gagal menghapus pegawai: {ex.Message}");
+            Console.WriteLine($"[KESALAHAN] Gagal menghapus pegawai: {ex.Message}");
             return false;
         }
     }
