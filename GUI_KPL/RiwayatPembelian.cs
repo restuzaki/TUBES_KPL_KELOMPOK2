@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GUI_KPL
 {
-    public partial class BacaResep: Form
+    public partial class RiwayatPembelian: Form
     {
-        public BacaResep()
+        public RiwayatPembelian()
         {
             InitializeComponent();
         }

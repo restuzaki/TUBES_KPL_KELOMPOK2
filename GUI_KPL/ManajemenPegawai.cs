@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GUI_KPL
 {
-    public partial class BacaResep: Form
+    public partial class ManajemenPegawai : Form
     {
-        public BacaResep()
+        public ManajemenPegawai()
         {
             InitializeComponent();
         }

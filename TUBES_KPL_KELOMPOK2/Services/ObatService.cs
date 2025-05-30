@@ -24,7 +24,7 @@ namespace TUBES_KPL_KELOMPOK2.Services
             };
         }
 
-        public async Task<List<Obat>> GetAllObatAsync()
+        public async Task<List<Obat>> DapatkanSemuaObatAsync()
         {
             try
             {
@@ -32,7 +32,7 @@ namespace TUBES_KPL_KELOMPOK2.Services
 
                 if (!response.IsSuccessStatusCode)
                 {
-                    
+
                     return new List<Obat>();
                 }
 
@@ -43,17 +43,17 @@ namespace TUBES_KPL_KELOMPOK2.Services
             }
             catch (HttpRequestException)
             {
-                
+
                 return new List<Obat>();
             }
             catch (JsonException)
             {
-                
+
                 return new List<Obat>();
             }
         }
 
-        public async Task<Obat> GetObatByIdAsync(string id)
+        public async Task<Obat> DapatkanObatByIdAsync(string id)
         {
             if (string.IsNullOrWhiteSpace(id))
                 return null;
@@ -64,7 +64,7 @@ namespace TUBES_KPL_KELOMPOK2.Services
 
                 if (!response.IsSuccessStatusCode)
                 {
-                    
+
                     return null;
                 }
 
