@@ -2,7 +2,7 @@
 
 public class ObatStateManager
 {
-    public void CheckStatus(Obat obat)
+    public void TampilkanStatus(Obat obat)
     {
         try
         {
