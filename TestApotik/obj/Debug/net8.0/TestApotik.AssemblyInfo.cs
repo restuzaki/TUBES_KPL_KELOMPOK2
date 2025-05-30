@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TestApotik")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9a076422781eade6e7ac7144e31c06f9a11fd65f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+461a04a63e65053f624b6a708c36956a487fb547")]
 [assembly: System.Reflection.AssemblyProductAttribute("TestApotik")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TestApotik")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
