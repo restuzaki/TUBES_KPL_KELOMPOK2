@@ -49,7 +49,9 @@ namespace GUI_KPL
 
         private void button5_Click(object sender, EventArgs e)
         {
-            //implentasi disini
+            AnalisisPenyakitForm analisisPenyakitForm = new();
+            analisisPenyakitForm.Show();
+            this.Hide(); 
         }
 
         private void button6_Click(object sender, EventArgs e)

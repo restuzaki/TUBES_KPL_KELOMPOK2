@@ -79,4 +79,69 @@ public class AnalisisPenyakit
             Console.Error.WriteLine($"Error menampilkan analisis: {ex.Message}");
         }
     }
+    public async Task TambahPenyakitAsync(PenyakitAnalisis penyakitBaru)
+    {
+        if (penyakitBaru == null)
+        {
+            Console.Error.WriteLine("Data penyakit tidak boleh null.");
+            return;
+        }
+
+        // Tambah ke list internal
+        diseaseAnalyses.Add(penyakitBaru);
+        await SimpanKeFileAsync();
+    }
+
+    private async Task SimpanKeFileAsync()
+    {
+        try
+        {
+            string filePath = "Data\\PenyakitAnalisis.Json";
+
+            // Buat direktori jika belum ada
+            string directory = Path.GetDirectoryName(filePath);
+            if (!Directory.Exists(directory))
+            {
+                Directory.CreateDirectory(directory!);
+            }
+
+            var jsonOptions = new JsonSerializerOptions
+            {
+                WriteIndented = true
+            };
+
+            string jsonString = JsonSerializer.Serialize(diseaseAnalyses, jsonOptions);
+            await File.WriteAllTextAsync(filePath, jsonString);
+
+            Console.WriteLine("Data berhasil disimpan ke file JSON.");
+        }
+        catch (Exception ex)
+        {
+            Console.Error.WriteLine($"Gagal menyimpan data ke file: {ex.Message}");
+        }
+    }
+    public async Task<bool> HapusPenyakitAsync(string namaPenyakit)
+    {
+        if (string.IsNullOrWhiteSpace(namaPenyakit))
+        {
+            Console.Error.WriteLine("Nama penyakit tidak boleh kosong.");
+            return false;
+        }
+
+        var penyakitYangDihapus = diseaseAnalyses
+            .Find(p => string.Equals(p.NamaPenyakit, namaPenyakit, StringComparison.OrdinalIgnoreCase));
+
+        if (penyakitYangDihapus == null)
+        {
+            Console.WriteLine($"Penyakit dengan nama '{namaPenyakit}' tidak ditemukan.");
+            return false;
+        }
+
+        diseaseAnalyses.Remove(penyakitYangDihapus);
+        await SimpanKeFileAsync();
+
+        Console.WriteLine($"Penyakit '{namaPenyakit}' berhasil dihapus.");
+        return true;
+    }
+
 }

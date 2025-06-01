@@ -8,7 +8,8 @@
     ".NETCoreApp,Version=v8.0": {
       "GUI_KPL/1.0.0": {
         "dependencies": {
-          "APOTEKKU_API_Kelompok2": "1.0.0"
+          "APOTEKKU_API_Kelompok2": "1.0.0",
+          "TUBES_KPL_KELOMPOK2": "1.0.0"
         },
         "runtime": {
           "GUI_KPL.dll": {}
@@ -112,6 +113,14 @@
           "System.Threading.Timer": "4.3.0",
           "System.Xml.ReaderWriter": "4.3.0",
           "System.Xml.XDocument": "4.3.0"
+        }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "13.0.0.0",
+            "fileVersion": "13.0.3.27908"
+          }
         }
       },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {},
@@ -798,6 +807,18 @@
             "fileVersion": "1.0.0.0"
           }
         }
+      },
+      "TUBES_KPL_KELOMPOK2/1.0.0": {
+        "dependencies": {
+          "APOTEKKU_API_Kelompok2": "1.0.0",
+          "Newtonsoft.Json": "13.0.3"
+        },
+        "runtime": {
+          "TUBES_KPL_KELOMPOK2.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -876,6 +897,13 @@
       "sha512": "sha512-WcSp3+vP+yHNgS8EV5J7pZ9IRpeDuARBPN28by8zqff1wJQXm26PVU8L3/fYLBJVU7BtDyqNVWq2KlCVvSSR4A==",
       "path": "netstandard.library/1.6.1",
       "hashPath": "netstandard.library.1.6.1.nupkg.sha512"
+    },
+    "Newtonsoft.Json/13.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HrC5BXdl00IP9zeV+0Z848QWPAoCr9P3bDEZguI+gkLcBKAOxix/tLEAAHC+UvDNPv4a2d18lOReHMOagPa+zQ==",
+      "path": "newtonsoft.json/13.0.3",
+      "hashPath": "newtonsoft.json.13.0.3.nupkg.sha512"
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
       "type": "package",
@@ -1410,6 +1438,11 @@
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
     },
     "APOTEKKU_API_Kelompok2/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TUBES_KPL_KELOMPOK2/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

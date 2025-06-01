@@ -39,7 +39,10 @@ namespace GUI_KPL
 
         private void button3_Click(object sender, EventArgs e)
         {
-            //ini ganti ke arah masing masing bagiannya
+            string User = _currentUser.Nama;
+            PembelianObatForm pembelianObatForm = new PembelianObatForm(User);
+            pembelianObatForm.Show();
+            this.Hide();
         }
 
         private void button4_Click(object sender, EventArgs e)
