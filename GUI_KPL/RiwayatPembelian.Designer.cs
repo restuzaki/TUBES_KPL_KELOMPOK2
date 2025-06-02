@@ -36,11 +36,11 @@
             // dataGridViewPembelian
             // 
             dataGridViewPembelian.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewPembelian.Location = new Point(72, 92);
-            dataGridViewPembelian.Margin = new Padding(6);
+            dataGridViewPembelian.Location = new Point(44, 58);
+            dataGridViewPembelian.Margin = new Padding(4, 4, 4, 4);
             dataGridViewPembelian.Name = "dataGridViewPembelian";
             dataGridViewPembelian.RowHeadersWidth = 82;
-            dataGridViewPembelian.Size = new Size(1336, 877);
+            dataGridViewPembelian.Size = new Size(822, 548);
             dataGridViewPembelian.TabIndex = 4;
             // 
             // btnKembali
@@ -48,10 +48,10 @@
             btnKembali.BackColor = Color.YellowGreen;
             btnKembali.Font = new Font("Yu Gothic UI Semibold", 9F, FontStyle.Bold);
             btnKembali.ForeColor = Color.White;
-            btnKembali.Location = new Point(72, 995);
-            btnKembali.Margin = new Padding(6);
+            btnKembali.Location = new Point(44, 622);
+            btnKembali.Margin = new Padding(4, 4, 4, 4);
             btnKembali.Name = "btnKembali";
-            btnKembali.Size = new Size(254, 79);
+            btnKembali.Size = new Size(156, 49);
             btnKembali.TabIndex = 5;
             btnKembali.Text = "Kembali";
             btnKembali.UseVisualStyleBackColor = false;
@@ -59,13 +59,15 @@
             // 
             // RiwayatPembelian
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonFace;
-            ClientSize = new Size(1489, 1103);
+            ClientSize = new Size(916, 689);
             Controls.Add(btnKembali);
             Controls.Add(dataGridViewPembelian);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "RiwayatPembelian";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "RiwayatPembelian";
             ((System.ComponentModel.ISupportInitialize)dataGridViewPembelian).EndInit();
             ResumeLayout(false);
