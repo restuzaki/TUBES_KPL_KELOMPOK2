@@ -1,10 +1,10 @@
 [
   {
     "id": null,
-    "nama": "Amoxicillin",
+    "nama": "Paracetamol",
     "status": 0,
-    "harga": 12000,
+    "harga": 5000,
     "kadaluarsa": null,
-    "stok": 5
+    "stok": 2
   }
 ]

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GUI_KPL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c990837a56e7222cc2c8397d2f98611038df4e9a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+256bff00829dd7be832b14102f4cd822196c07b1")]
 [assembly: System.Reflection.AssemblyProductAttribute("GUI_KPL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GUI_KPL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
