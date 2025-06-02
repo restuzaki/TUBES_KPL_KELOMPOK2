@@ -2,137 +2,135 @@
 {
     partial class PembelianObatForm
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
-            {
                 components.Dispose();
-            }
             base.Dispose(disposing);
         }
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
-            comboBox1 = new ComboBox();
-            textBox1 = new TextBox();
-            button1 = new Button();
-            dataGridView1 = new DataGridView();
-            button2 = new Button();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            button3 = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            cmbJenisObat = new ComboBox();
+            txtJumlahObat = new TextBox();
+            btnTambah = new Button();
+            dataGridViewPembelian = new DataGridView();
+            btnKembali = new Button();
+            lblJenisObat = new Label();
+            lblJumlahObat = new Label();
+            lblJudul = new Label();
+            btnBeli = new Button();
+
+            ((System.ComponentModel.ISupportInitialize)(dataGridViewPembelian)).BeginInit();
             SuspendLayout();
+
             // 
-            // comboBox1
+            // cmbJenisObat
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(95, 76);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(173, 23);
-            comboBox1.TabIndex = 0;
+            cmbJenisObat.FormattingEnabled = true;
+            cmbJenisObat.Location = new Point(95, 76);
+            cmbJenisObat.Name = "cmbJenisObat";
+            cmbJenisObat.Size = new Size(173, 23);
+            cmbJenisObat.TabIndex = 0;
+
             // 
-            // textBox1
+            // txtJumlahObat
             // 
-            textBox1.Location = new Point(113, 105);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(154, 23);
-            textBox1.TabIndex = 1;
+            txtJumlahObat.Location = new Point(113, 105);
+            txtJumlahObat.Name = "txtJumlahObat";
+            txtJumlahObat.Size = new Size(154, 23);
+            txtJumlahObat.TabIndex = 1;
+
             // 
-            // button1
+            // btnTambah
             // 
-            button1.BackColor = Color.YellowGreen;
-            button1.Font = new Font("Yu Gothic UI Semibold", 9F, FontStyle.Bold);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(131, 150);
-            button1.Name = "button1";
-            button1.Size = new Size(137, 36);
-            button1.TabIndex = 2;
-            button1.Text = "Tambah Ke Keranjang";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            btnTambah.BackColor = Color.YellowGreen;
+            btnTambah.Font = new Font("Yu Gothic UI Semibold", 9F, FontStyle.Bold);
+            btnTambah.ForeColor = Color.White;
+            btnTambah.Location = new Point(131, 150);
+            btnTambah.Name = "btnTambah";
+            btnTambah.Size = new Size(137, 36);
+            btnTambah.TabIndex = 2;
+            btnTambah.Text = "Tambah Ke Keranjang";
+            btnTambah.UseVisualStyleBackColor = false;
+            btnTambah.Click += btnTambah_Click;
+
             // 
-            // dataGridView1
+            // dataGridViewPembelian
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(287, 49);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(446, 411);
-            dataGridView1.TabIndex = 3;
+            dataGridViewPembelian.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewPembelian.Location = new Point(287, 49);
+            dataGridViewPembelian.Name = "dataGridViewPembelian";
+            dataGridViewPembelian.Size = new Size(446, 411);
+            dataGridViewPembelian.TabIndex = 3;
+
             // 
-            // button2
+            // btnKembali
             // 
-            button2.BackColor = Color.YellowGreen;
-            button2.Font = new Font("Yu Gothic UI Semibold", 9F, FontStyle.Bold);
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(131, 423);
-            button2.Name = "button2";
-            button2.Size = new Size(137, 37);
-            button2.TabIndex = 4;
-            button2.Text = "Kembali";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
+            btnKembali.BackColor = Color.YellowGreen;
+            btnKembali.Font = new Font("Yu Gothic UI Semibold", 9F, FontStyle.Bold);
+            btnKembali.ForeColor = Color.White;
+            btnKembali.Location = new Point(131, 423);
+            btnKembali.Name = "btnKembali";
+            btnKembali.Size = new Size(137, 37);
+            btnKembali.TabIndex = 4;
+            btnKembali.Text = "Kembali";
+            btnKembali.UseVisualStyleBackColor = false;
+            btnKembali.Click += btnKembali_Click;
+
             // 
-            // label1
+            // lblJenisObat
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Yu Gothic UI Semibold", 9.75F, FontStyle.Bold);
-            label1.Location = new Point(12, 79);
-            label1.Name = "label1";
-            label1.Size = new Size(78, 17);
-            label1.TabIndex = 5;
-            label1.Text = "Jenis Obat :";
+            lblJenisObat.AutoSize = true;
+            lblJenisObat.Font = new Font("Yu Gothic UI Semibold", 9.75F, FontStyle.Bold);
+            lblJenisObat.Location = new Point(12, 79);
+            lblJenisObat.Name = "lblJenisObat";
+            lblJenisObat.Size = new Size(78, 17);
+            lblJenisObat.TabIndex = 5;
+            lblJenisObat.Text = "Jenis Obat :";
+
             // 
-            // label2
+            // lblJumlahObat
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Yu Gothic UI Semibold", 9.75F, FontStyle.Bold);
-            label2.Location = new Point(13, 108);
-            label2.Name = "label2";
-            label2.Size = new Size(92, 17);
-            label2.TabIndex = 6;
-            label2.Text = "Jumlah Obat :";
+            lblJumlahObat.AutoSize = true;
+            lblJumlahObat.Font = new Font("Yu Gothic UI Semibold", 9.75F, FontStyle.Bold);
+            lblJumlahObat.Location = new Point(13, 108);
+            lblJumlahObat.Name = "lblJumlahObat";
+            lblJumlahObat.Size = new Size(92, 17);
+            lblJumlahObat.TabIndex = 6;
+            lblJumlahObat.Text = "Jumlah Obat :";
+
             // 
-            // label3
+            // lblJudul
             // 
-            label3.AutoSize = true;
-            label3.BackColor = SystemColors.Control;
-            label3.Font = new Font("Yu Gothic UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.YellowGreen;
-            label3.Location = new Point(28, 19);
-            label3.Name = "label3";
-            label3.Size = new Size(178, 25);
-            label3.TabIndex = 7;
-            label3.Text = "Apotekku Beli Obat";
+            lblJudul.AutoSize = true;
+            lblJudul.BackColor = SystemColors.Control;
+            lblJudul.Font = new Font("Yu Gothic UI Semibold", 14.25F, FontStyle.Bold);
+            lblJudul.ForeColor = Color.YellowGreen;
+            lblJudul.Location = new Point(28, 19);
+            lblJudul.Name = "lblJudul";
+            lblJudul.Size = new Size(178, 25);
+            lblJudul.TabIndex = 7;
+            lblJudul.Text = "Apotekku Beli Obat";
+
             // 
-            // button3
+            // btnBeli
             // 
-            button3.BackColor = Color.YellowGreen;
-            button3.Font = new Font("Yu Gothic UI Semibold", 9F, FontStyle.Bold);
-            button3.ForeColor = Color.White;
-            button3.Location = new Point(131, 197);
-            button3.Name = "button3";
-            button3.Size = new Size(136, 36);
-            button3.TabIndex = 8;
-            button3.Text = "Beli Obat ";
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click;
+            btnBeli.BackColor = Color.YellowGreen;
+            btnBeli.Font = new Font("Yu Gothic UI Semibold", 9F, FontStyle.Bold);
+            btnBeli.ForeColor = Color.White;
+            btnBeli.Location = new Point(131, 197);
+            btnBeli.Name = "btnBeli";
+            btnBeli.Size = new Size(136, 36);
+            btnBeli.TabIndex = 8;
+            btnBeli.Text = "Beli Obat";
+            btnBeli.UseVisualStyleBackColor = false;
+            btnBeli.Click += btnBeli_Click;
+
             // 
             // PembelianObatForm
             // 
@@ -140,32 +138,33 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(802, 517);
-            Controls.Add(button3);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(button2);
-            Controls.Add(dataGridView1);
-            Controls.Add(button1);
-            Controls.Add(textBox1);
-            Controls.Add(comboBox1);
+            Controls.Add(btnBeli);
+            Controls.Add(lblJudul);
+            Controls.Add(lblJumlahObat);
+            Controls.Add(lblJenisObat);
+            Controls.Add(btnKembali);
+            Controls.Add(dataGridViewPembelian);
+            Controls.Add(btnTambah);
+            Controls.Add(txtJumlahObat);
+            Controls.Add(cmbJenisObat);
             Name = "PembelianObatForm";
-            Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Text = "Pembelian Obat";
+
+            ((System.ComponentModel.ISupportInitialize)(dataGridViewPembelian)).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private ComboBox comboBox1;
-        private TextBox textBox1;
-        private Button button1;
-        private DataGridView dataGridView1;
-        private Button button2;
-        private Label label1;
-        private Label label2;
-        private Label label3;
-        private Button button3;
+        private ComboBox cmbJenisObat;
+        private TextBox txtJumlahObat;
+        private Button btnTambah;
+        private DataGridView dataGridViewPembelian;
+        private Button btnKembali;
+        private Label lblJenisObat;
+        private Label lblJumlahObat;
+        private Label lblJudul;
+        private Button btnBeli;
     }
 }
