@@ -28,110 +28,142 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel1 = new Panel();
-            button1 = new Button();
-            textBox1 = new TextBox();
-            label2 = new Label();
             label1 = new Label();
-            listBox1 = new ListBox();
-            panel1.SuspendLayout();
+            MasukkanObat = new TextBox();
+            label2 = new Label();
+            TombolCari = new Button();
+            dataGridView1 = new DataGridView();
+            comboBox1 = new ComboBox();
+            label3 = new Label();
+            TombolKembali = new Button();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
-            // 
-            // panel1
-            // 
-            panel1.BackColor = SystemColors.Control;
-            panel1.Controls.Add(button1);
-            panel1.Controls.Add(textBox1);
-            panel1.Controls.Add(label2);
-            panel1.Controls.Add(label1);
-            panel1.Dock = DockStyle.Left;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(344, 450);
-            panel1.TabIndex = 2;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.YellowGreen;
-            button1.FlatAppearance.BorderColor = Color.Black;
-            button1.FlatAppearance.BorderSize = 4;
-            button1.FlatStyle = FlatStyle.Popup;
-            button1.Font = new Font("Yu Gothic Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(43, 229);
-            button1.Name = "button1";
-            button1.Size = new Size(212, 38);
-            button1.TabIndex = 8;
-            button1.Text = "Cek";
-            button1.UseVisualStyleBackColor = false;
-            // 
-            // textBox1
-            // 
-            textBox1.BackColor = SystemColors.ScrollBar;
-            textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.Font = new Font("Yu Gothic Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(29, 142);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(237, 34);
-            textBox1.TabIndex = 2;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Yu Gothic Medium", 10F, FontStyle.Bold);
-            label2.ForeColor = SystemColors.ControlDarkDark;
-            label2.Location = new Point(29, 117);
-            label2.Name = "label2";
-            label2.Size = new Size(77, 22);
-            label2.TabIndex = 1;
-            label2.Text = "ID Obat";
-            label2.TextAlign = ContentAlignment.TopRight;
-            label2.Click += label2_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Yu Gothic UI Semibold", 20F, FontStyle.Bold);
             label1.ForeColor = Color.YellowGreen;
-            label1.Location = new Point(29, 56);
+            label1.Location = new Point(39, 38);
             label1.Name = "label1";
-            label1.Size = new Size(226, 46);
+            label1.Size = new Size(219, 46);
             label1.TabIndex = 0;
-            label1.Text = "Cek Izin Obat";
-            label1.Click += label1_Click_1;
+            label1.Text = "Cek izin obat";
+            label1.Click += label1_Click;
             // 
-            // listBox1
+            // MasukkanObat
             // 
-            listBox1.FormattingEnabled = true;
-            listBox1.Location = new Point(362, 186);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(426, 104);
-            listBox1.TabIndex = 9;
-            listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged_1;
+            MasukkanObat.BackColor = SystemColors.ScrollBar;
+            MasukkanObat.BorderStyle = BorderStyle.FixedSingle;
+            MasukkanObat.Font = new Font("Yu Gothic Medium", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            MasukkanObat.Location = new Point(39, 138);
+            MasukkanObat.Multiline = true;
+            MasukkanObat.Name = "MasukkanObat";
+            MasukkanObat.Size = new Size(237, 34);
+            MasukkanObat.TabIndex = 3;
+            MasukkanObat.TextChanged += MasukkanObat_TextChanged;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Yu Gothic Medium", 10F, FontStyle.Bold);
+            label2.ForeColor = SystemColors.ControlDarkDark;
+            label2.Location = new Point(39, 113);
+            label2.Name = "label2";
+            label2.Size = new Size(170, 22);
+            label2.TabIndex = 4;
+            label2.Text = "Masukkan ID obat";
+            label2.Click += label2_Click;
+            // 
+            // TombolCari
+            // 
+            TombolCari.BackColor = Color.YellowGreen;
+            TombolCari.Font = new Font("Yu Gothic UI Semibold", 9F, FontStyle.Bold);
+            TombolCari.ForeColor = Color.White;
+            TombolCari.Location = new Point(176, 205);
+            TombolCari.Margin = new Padding(4);
+            TombolCari.Name = "TombolCari";
+            TombolCari.Size = new Size(100, 41);
+            TombolCari.TabIndex = 20;
+            TombolCari.Text = "Cari";
+            TombolCari.UseVisualStyleBackColor = false;
+            TombolCari.Click += TombolCari_Click;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(371, 138);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(417, 286);
+            dataGridView1.TabIndex = 21;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Terdaftar", "Tidak Terdaftar", "Kadaluarsa" });
+            comboBox1.Location = new Point(371, 104);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(237, 28);
+            comboBox1.TabIndex = 22;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Yu Gothic Medium", 10F, FontStyle.Bold);
+            label3.ForeColor = SystemColors.ControlDarkDark;
+            label3.Location = new Point(371, 79);
+            label3.Name = "label3";
+            label3.Size = new Size(95, 22);
+            label3.TabIndex = 23;
+            label3.Text = "Filter izin";
+            // 
+            // TombolKembali
+            // 
+            TombolKembali.BackColor = Color.YellowGreen;
+            TombolKembali.Font = new Font("Yu Gothic UI Semibold", 9F, FontStyle.Bold);
+            TombolKembali.ForeColor = Color.White;
+            TombolKembali.Location = new Point(12, 443);
+            TombolKembali.Margin = new Padding(3, 4, 3, 4);
+            TombolKembali.Name = "TombolKembali";
+            TombolKembali.Size = new Size(117, 53);
+            TombolKembali.TabIndex = 24;
+            TombolKembali.Text = "Kembali";
+            TombolKembali.UseVisualStyleBackColor = false;
+            TombolKembali.Click += button3_Click;
             // 
             // CekIzinObat
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(listBox1);
-            Controls.Add(panel1);
+            ClientSize = new Size(800, 509);
+            Controls.Add(TombolKembali);
+            Controls.Add(label3);
+            Controls.Add(comboBox1);
+            Controls.Add(dataGridView1);
+            Controls.Add(TombolCari);
+            Controls.Add(label2);
+            Controls.Add(MasukkanObat);
+            Controls.Add(label1);
             Name = "CekIzinObat";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "CekIzinObat";
-            Load += CekIzinObat_Load;
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        private Panel panel1;
-        private Button button1;
-        private TextBox textBox1;
-        private Label label2;
         private Label label1;
-        private ListBox listBox1;
+        private TextBox MasukkanObat;
+        private Label label2;
+        private Button TombolCari;
+        private DataGridView dataGridView1;
+        private ComboBox comboBox1;
+        private Label label3;
+        private Button TombolKembali;
     }
 }
