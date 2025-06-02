@@ -103,7 +103,7 @@ namespace GUI_KPL
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            // Toggle karakter bintang
+            
             bool showPassword = checkBox1.Checked;
             textBox2.UseSystemPasswordChar = !showPassword;
             textBox3.UseSystemPasswordChar = !showPassword;
@@ -111,7 +111,7 @@ namespace GUI_KPL
 
         private void Register_Load(object sender, EventArgs e)
         {
-            // Sembunyikan password saat pertama kali form dibuka
+            
             textBox2.UseSystemPasswordChar = true;
             textBox3.UseSystemPasswordChar = true;
         }
@@ -129,6 +129,9 @@ namespace GUI_KPL
             MessageBox.Show(message, "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }
