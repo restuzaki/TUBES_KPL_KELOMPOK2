@@ -52,17 +52,24 @@ namespace GUI_KPL
 
         private void button5_Click(object sender, EventArgs e)
         {
-            //ini ganti ke arah masing masing bagiannya
+            BacaResepTampilkan bacaResepTampilkan = new BacaResepTampilkan();
+            bacaResepTampilkan.Show();
+            this.Hide();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            //ini ganti ke arah masing masing bagiannya
+            BacaResep bacaResep = new BacaResep();
+            bacaResep.Show();
+            this.Hide();
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            //ini ganti ke arah masing masing bagiannya
+            string User = _currentUser.Nama;
+            RiwayatPembelian riwayatPembelian = new RiwayatPembelian(User);
+            riwayatPembelian.Show();
+            this.Hide();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
