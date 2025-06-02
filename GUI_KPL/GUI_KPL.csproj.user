@@ -16,13 +16,13 @@
     <Compile Update="Chatbot.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="ManajemenPegawai.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="PembelianObatForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="ManajemenPegawai.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="MenuAdmin.cs">

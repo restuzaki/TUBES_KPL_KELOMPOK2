@@ -1,5 +1,9 @@
 [
   {
+    "NamaPenyakit": "Flu",
+    "JumlahKasus": 30
+  },
+  {
     "NamaPenyakit": "HIV",
     "JumlahKasus": 20
   },
@@ -17,10 +21,6 @@
   },
   {
     "NamaPenyakit": "DBD",
-    "JumlahKasus": 15
-  },
-  {
-    "NamaPenyakit": "Flu",
-    "JumlahKasus": 100
+    "JumlahKasus": 8
   }
 ]
