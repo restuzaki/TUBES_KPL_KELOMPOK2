@@ -7,9 +7,9 @@
   },
   {
     "id": "PG002",
-    "nama": "Valentino Bimo",
-    "jabatan": "Asisten Apoteker",
-    "status": 2
+    "nama": "KILLUA",
+    "jabatan": "Dukun",
+    "status": 0
   },
   {
     "id": "PG003",
@@ -21,12 +21,6 @@
     "id": "PG004",
     "nama": "Ahmad Subardjoe",
     "jabatan": "Kasir",
-    "status": 0
-  },
-  {
-    "id": "PG009",
-    "nama": "Yudha",
-    "jabatan": "CEO",
     "status": 0
   }
 ]

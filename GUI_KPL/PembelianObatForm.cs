@@ -126,5 +126,10 @@ namespace GUI_KPL
 
             File.WriteAllText(filePath, json);
         }
+
+        private void cmbJenisObat_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

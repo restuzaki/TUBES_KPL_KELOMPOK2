@@ -197,3 +197,17 @@ C:\Users\macbookpro\TUBES_KPL_KELOMPOK2\GUI_KPL\obj\Debug\net8.0-windows\GUI_KPL
 C:\Users\macbookpro\TUBES_KPL_KELOMPOK2\GUI_KPL\obj\Debug\net8.0-windows\GUI_KPL.PembelianObatForm.resources
 C:\Users\macbookpro\TUBES_KPL_KELOMPOK2\GUI_KPL\obj\Debug\net8.0-windows\GUI_KPL.RiwayatPembelian.resources
 C:\Users\macbookpro\TUBES_KPL_KELOMPOK2\GUI_KPL\obj\Debug\net8.0-windows\GUI_KPL.BacaResepTampilkan.resources
+C:\Users\ASUS\source\repos\TUBES_KPL_KELOMPOK2\GUI_KPL\bin\Debug\net8.0-windows\Data\riwayat.json
+C:\Users\ASUS\source\repos\TUBES_KPL_KELOMPOK2\GUI_KPL\bin\Debug\net8.0-windows\TUBES_KPL_KELOMPOK2.deps.json
+C:\Users\ASUS\source\repos\TUBES_KPL_KELOMPOK2\GUI_KPL\bin\Debug\net8.0-windows\TUBES_KPL_KELOMPOK2.runtimeconfig.json
+C:\Users\ASUS\source\repos\TUBES_KPL_KELOMPOK2\GUI_KPL\bin\Debug\net8.0-windows\TUBES_KPL_KELOMPOK2.exe
+C:\Users\ASUS\source\repos\TUBES_KPL_KELOMPOK2\GUI_KPL\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\Users\ASUS\source\repos\TUBES_KPL_KELOMPOK2\GUI_KPL\bin\Debug\net8.0-windows\TUBES_KPL_KELOMPOK2.dll
+C:\Users\ASUS\source\repos\TUBES_KPL_KELOMPOK2\GUI_KPL\bin\Debug\net8.0-windows\TUBES_KPL_KELOMPOK2.pdb
+C:\Users\ASUS\source\repos\TUBES_KPL_KELOMPOK2\GUI_KPL\obj\Debug\net8.0-windows\GUI_KPL.AnalisisPenyakitForm.resources
+C:\Users\ASUS\source\repos\TUBES_KPL_KELOMPOK2\GUI_KPL\obj\Debug\net8.0-windows\GUI_KPL.BacaResep.resources
+C:\Users\ASUS\source\repos\TUBES_KPL_KELOMPOK2\GUI_KPL\obj\Debug\net8.0-windows\GUI_KPL.BacaResepTampilkan.resources
+C:\Users\ASUS\source\repos\TUBES_KPL_KELOMPOK2\GUI_KPL\obj\Debug\net8.0-windows\GUI_KPL.MenuAdmin.resources
+C:\Users\ASUS\source\repos\TUBES_KPL_KELOMPOK2\GUI_KPL\obj\Debug\net8.0-windows\GUI_KPL.MenuUser.resources
+C:\Users\ASUS\source\repos\TUBES_KPL_KELOMPOK2\GUI_KPL\obj\Debug\net8.0-windows\GUI_KPL.PembelianObatForm.resources
+C:\Users\ASUS\source\repos\TUBES_KPL_KELOMPOK2\GUI_KPL\obj\Debug\net8.0-windows\GUI_KPL.RiwayatPembelian.resources

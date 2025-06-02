@@ -56,12 +56,16 @@ namespace GUI_KPL
 
         private void button6_Click(object sender, EventArgs e)
         {
-            //implentasi disini
+            CekIzinObat cekIzinObatForm = new CekIzinObat();
+            cekIzinObatForm.Show();
+            this.Hide();
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            //implentasi disini
+            ManajemenPegawai manajemenPegawai = new ManajemenPegawai();
+            manajemenPegawai.Show();
+            this.Hide();
         }
 
         private void MenuAdmin_Load(object sender, EventArgs e)
