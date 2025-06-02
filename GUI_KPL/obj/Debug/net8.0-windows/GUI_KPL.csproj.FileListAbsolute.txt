@@ -182,3 +182,13 @@ C:\Users\ACER\Source\Repos\TUBES_KPL_KELOMPOK2\GUI_KPL\obj\Debug\net8.0-windows\
 C:\Users\ACER\Source\Repos\TUBES_KPL_KELOMPOK2\GUI_KPL\obj\Debug\net8.0-windows\ref\GUI_KPL.dll
 C:\Users\ACER\Source\Repos\TUBES_KPL_KELOMPOK2\GUI_KPL\obj\Debug\net8.0-windows\GUI_KPL.PembelianObatForm.resources
 C:\Users\ACER\Source\Repos\TUBES_KPL_KELOMPOK2\GUI_KPL\bin\Debug\net8.0-windows\Data\riwayat.json
+C:\Users\damai\TUBES_KPL_KELOMPOK2\GUI_KPL\bin\Debug\net8.0-windows\Data\riwayat.json
+C:\Users\damai\TUBES_KPL_KELOMPOK2\GUI_KPL\bin\Debug\net8.0-windows\TUBES_KPL_KELOMPOK2.deps.json
+C:\Users\damai\TUBES_KPL_KELOMPOK2\GUI_KPL\bin\Debug\net8.0-windows\TUBES_KPL_KELOMPOK2.runtimeconfig.json
+C:\Users\damai\TUBES_KPL_KELOMPOK2\GUI_KPL\bin\Debug\net8.0-windows\TUBES_KPL_KELOMPOK2.exe
+C:\Users\damai\TUBES_KPL_KELOMPOK2\GUI_KPL\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\Users\damai\TUBES_KPL_KELOMPOK2\GUI_KPL\bin\Debug\net8.0-windows\TUBES_KPL_KELOMPOK2.dll
+C:\Users\damai\TUBES_KPL_KELOMPOK2\GUI_KPL\bin\Debug\net8.0-windows\TUBES_KPL_KELOMPOK2.pdb
+C:\Users\damai\TUBES_KPL_KELOMPOK2\GUI_KPL\obj\Debug\net8.0-windows\GUI_KPL.AnalisisPenyakitForm.resources
+C:\Users\damai\TUBES_KPL_KELOMPOK2\GUI_KPL\obj\Debug\net8.0-windows\GUI_KPL.PembelianObatForm.resources
+C:\Users\damai\TUBES_KPL_KELOMPOK2\GUI_KPL\obj\Debug\net8.0-windows\GUI_KPL.Chatbot.resources

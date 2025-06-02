@@ -47,7 +47,9 @@ namespace GUI_KPL
 
         private void button4_Click(object sender, EventArgs e)
         {
-            //ini ganti ke arah masing masing bagiannya
+            Chatbot chatBot = new Chatbot(_currentUser);
+            chatBot.Show();
+            this.Hide();
         }
 
         private void button5_Click(object sender, EventArgs e)
