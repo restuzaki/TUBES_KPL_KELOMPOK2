@@ -18,35 +18,20 @@ namespace GUI_KPL
     public partial class CekIzinObat : Form
     {
         private ObatService _obatService;
+
         public CekIzinObat()
         {
             InitializeComponent();
             _obatService = new ObatService();
             Load += CekIzinObat_Load;
         }
-        private async void CekIzinObat_Load(object sender, EventArgs e)
+
+        private void CekIzinObat_Load(object sender, EventArgs e)
         {
             comboBox1.Items.Clear();
             comboBox1.Items.Add("Terdaftar");
             comboBox1.Items.Add("TidakTerdaftar");
             comboBox1.Items.Add("Kadaluarsa");
-        }
-
-
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
         private async void TombolCari_Click(object sender, EventArgs e)
@@ -59,16 +44,59 @@ namespace GUI_KPL
                 return;
             }
 
-            var obat = await _obatService.DapatkanObatByIdAsync(idObat);
+            var obatData = await _obatService.DapatkanObatByIdAsync(idObat);
 
-
-            if (obat == null)
+            if (obatData == null)
             {
                 MessageBox.Show("Obat tidak ditemukan.");
                 return;
             }
 
+            var obat = new ObatBuilder()
+                .AturId(obatData.id)
+                .AturNama(obatData.nama)
+                .AturStatus(obatData.status)
+                .AturHarga(obatData.harga)
+                .AturKadaluarsa(obatData.kadaluarsa)
+                .AturStok(obatData.stok)
+                .Bangun();
 
+            TampilkanData(new List<Obat> { obat });
+        }
+
+        private async void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedItem == null)
+                return;
+
+            string statusTerpilih = comboBox1.SelectedItem.ToString();
+
+            try
+            {
+                var semuaObat = await _obatService.DapatkanSemuaObatAsync();
+
+                var hasilFilter = semuaObat
+                    .Where(o => o.status.ToString().Equals(statusTerpilih, StringComparison.OrdinalIgnoreCase))
+                    .Select(o => new ObatBuilder()
+                        .AturId(o.id)
+                        .AturNama(o.nama)
+                        .AturStatus(o.status)
+                        .AturHarga(o.harga)
+                        .AturKadaluarsa(o.kadaluarsa)
+                        .AturStok(o.stok)
+                        .Bangun())
+                    .ToList();
+
+                TampilkanData(hasilFilter);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Gagal memuat data obat:\n" + ex.Message);
+            }
+        }
+
+        private void TampilkanData(List<Obat> daftarObat)
+        {
             dataGridView1.Columns.Clear();
             dataGridView1.AutoGenerateColumns = false;
 
@@ -93,35 +121,12 @@ namespace GUI_KPL
                 Name = "Status"
             });
 
-            dataGridView1.DataSource = new List<Obat> { obat };
+            dataGridView1.DataSource = daftarObat;
         }
-
 
         private void MasukkanObat_TextChanged(object sender, EventArgs e)
         {
-
-        }
-
-        private async void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (comboBox1.SelectedItem == null)
-                return;
-
-            string statusTerpilih = comboBox1.SelectedItem.ToString();
-
-            try
-            {
-                var semuaObat = await _obatService.DapatkanSemuaObatAsync();
-
-                var hasilFilter = semuaObat.FindAll(o =>
-                    o.status.ToString().Equals(statusTerpilih, StringComparison.OrdinalIgnoreCase));
-
-                dataGridView1.DataSource = hasilFilter;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Gagal memuat data obat:\n" + ex.Message);
-            }
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -135,6 +140,18 @@ namespace GUI_KPL
             var menuAdmin = new MenuAdmin(currentUser);
             menuAdmin.Show();
             this.Hide();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
         }
     }
 }
