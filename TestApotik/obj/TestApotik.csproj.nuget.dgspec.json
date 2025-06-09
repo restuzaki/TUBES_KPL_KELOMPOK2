@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ASUS\\source\\repos\\TUBES_KPL_KELOMPOK2\\TestApotik\\TestApotik.csproj": {}
+    "D:\\bimo\\semester 4\\KPL\\TUBES FINAL\\TestApotik\\TestApotik.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ASUS\\source\\repos\\TUBES_KPL_KELOMPOK2\\APOTEKKU_API_Kelompok2\\APOTEKKU_API_Kelompok2.csproj": {
+    "D:\\bimo\\semester 4\\KPL\\TUBES FINAL\\APOTEKKU_API_Kelompok2\\APOTEKKU_API_Kelompok2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ASUS\\source\\repos\\TUBES_KPL_KELOMPOK2\\APOTEKKU_API_Kelompok2\\APOTEKKU_API_Kelompok2.csproj",
+        "projectUniqueName": "D:\\bimo\\semester 4\\KPL\\TUBES FINAL\\APOTEKKU_API_Kelompok2\\APOTEKKU_API_Kelompok2.csproj",
         "projectName": "APOTEKKU_API_Kelompok2",
-        "projectPath": "C:\\Users\\ASUS\\source\\repos\\TUBES_KPL_KELOMPOK2\\APOTEKKU_API_Kelompok2\\APOTEKKU_API_Kelompok2.csproj",
-        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ASUS\\source\\repos\\TUBES_KPL_KELOMPOK2\\APOTEKKU_API_Kelompok2\\obj\\",
+        "projectPath": "D:\\bimo\\semester 4\\KPL\\TUBES FINAL\\APOTEKKU_API_Kelompok2\\APOTEKKU_API_Kelompok2.csproj",
+        "packagesPath": "C:\\Users\\bimov\\.nuget\\packages\\",
+        "outputPath": "D:\\bimo\\semester 4\\KPL\\TUBES FINAL\\APOTEKKU_API_Kelompok2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\bimov\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -44,7 +45,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -78,24 +79,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\ASUS\\source\\repos\\TUBES_KPL_KELOMPOK2\\TestApotik\\TestApotik.csproj": {
+    "D:\\bimo\\semester 4\\KPL\\TUBES FINAL\\TestApotik\\TestApotik.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ASUS\\source\\repos\\TUBES_KPL_KELOMPOK2\\TestApotik\\TestApotik.csproj",
+        "projectUniqueName": "D:\\bimo\\semester 4\\KPL\\TUBES FINAL\\TestApotik\\TestApotik.csproj",
         "projectName": "TestApotik",
-        "projectPath": "C:\\Users\\ASUS\\source\\repos\\TUBES_KPL_KELOMPOK2\\TestApotik\\TestApotik.csproj",
-        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ASUS\\source\\repos\\TUBES_KPL_KELOMPOK2\\TestApotik\\obj\\",
+        "projectPath": "D:\\bimo\\semester 4\\KPL\\TUBES FINAL\\TestApotik\\TestApotik.csproj",
+        "packagesPath": "C:\\Users\\bimov\\.nuget\\packages\\",
+        "outputPath": "D:\\bimo\\semester 4\\KPL\\TUBES FINAL\\TestApotik\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\bimov\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -104,17 +105,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\ASUS\\source\\repos\\TUBES_KPL_KELOMPOK2\\APOTEKKU_API_Kelompok2\\APOTEKKU_API_Kelompok2.csproj": {
-                "projectPath": "C:\\Users\\ASUS\\source\\repos\\TUBES_KPL_KELOMPOK2\\APOTEKKU_API_Kelompok2\\APOTEKKU_API_Kelompok2.csproj"
+              "D:\\bimo\\semester 4\\KPL\\TUBES FINAL\\APOTEKKU_API_Kelompok2\\APOTEKKU_API_Kelompok2.csproj": {
+                "projectPath": "D:\\bimo\\semester 4\\KPL\\TUBES FINAL\\APOTEKKU_API_Kelompok2\\APOTEKKU_API_Kelompok2.csproj"
               },
-              "C:\\Users\\ASUS\\source\\repos\\TUBES_KPL_KELOMPOK2\\TUBES_KPL_KELOMPOK2\\TUBES_KPL_KELOMPOK2.csproj": {
-                "projectPath": "C:\\Users\\ASUS\\source\\repos\\TUBES_KPL_KELOMPOK2\\TUBES_KPL_KELOMPOK2\\TUBES_KPL_KELOMPOK2.csproj"
+              "D:\\bimo\\semester 4\\KPL\\TUBES FINAL\\TUBES_KPL_KELOMPOK2\\TUBES_KPL_KELOMPOK2.csproj": {
+                "projectPath": "D:\\bimo\\semester 4\\KPL\\TUBES FINAL\\TUBES_KPL_KELOMPOK2\\TUBES_KPL_KELOMPOK2.csproj"
               }
             }
           }
@@ -129,7 +131,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -160,24 +162,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\ASUS\\source\\repos\\TUBES_KPL_KELOMPOK2\\TUBES_KPL_KELOMPOK2\\TUBES_KPL_KELOMPOK2.csproj": {
+    "D:\\bimo\\semester 4\\KPL\\TUBES FINAL\\TUBES_KPL_KELOMPOK2\\TUBES_KPL_KELOMPOK2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ASUS\\source\\repos\\TUBES_KPL_KELOMPOK2\\TUBES_KPL_KELOMPOK2\\TUBES_KPL_KELOMPOK2.csproj",
+        "projectUniqueName": "D:\\bimo\\semester 4\\KPL\\TUBES FINAL\\TUBES_KPL_KELOMPOK2\\TUBES_KPL_KELOMPOK2.csproj",
         "projectName": "TUBES_KPL_KELOMPOK2",
-        "projectPath": "C:\\Users\\ASUS\\source\\repos\\TUBES_KPL_KELOMPOK2\\TUBES_KPL_KELOMPOK2\\TUBES_KPL_KELOMPOK2.csproj",
-        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ASUS\\source\\repos\\TUBES_KPL_KELOMPOK2\\TUBES_KPL_KELOMPOK2\\obj\\",
+        "projectPath": "D:\\bimo\\semester 4\\KPL\\TUBES FINAL\\TUBES_KPL_KELOMPOK2\\TUBES_KPL_KELOMPOK2.csproj",
+        "packagesPath": "C:\\Users\\bimov\\.nuget\\packages\\",
+        "outputPath": "D:\\bimo\\semester 4\\KPL\\TUBES FINAL\\TUBES_KPL_KELOMPOK2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\bimov\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -186,14 +188,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\ASUS\\source\\repos\\TUBES_KPL_KELOMPOK2\\APOTEKKU_API_Kelompok2\\APOTEKKU_API_Kelompok2.csproj": {
-                "projectPath": "C:\\Users\\ASUS\\source\\repos\\TUBES_KPL_KELOMPOK2\\APOTEKKU_API_Kelompok2\\APOTEKKU_API_Kelompok2.csproj"
+              "D:\\bimo\\semester 4\\KPL\\TUBES FINAL\\APOTEKKU_API_Kelompok2\\APOTEKKU_API_Kelompok2.csproj": {
+                "projectPath": "D:\\bimo\\semester 4\\KPL\\TUBES FINAL\\APOTEKKU_API_Kelompok2\\APOTEKKU_API_Kelompok2.csproj"
               }
             }
           }
@@ -208,7 +211,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -235,7 +238,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

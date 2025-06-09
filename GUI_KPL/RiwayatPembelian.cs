@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text.Json;
 using System.Windows.Forms;
 using Apotekku_API.Models;
+using TUBES_KPL_KELOMPOK2.Services;
 
 namespace GUI_KPL
 {
@@ -12,6 +13,7 @@ namespace GUI_KPL
     {
         private List<Obat> riwayatPembelian = new();
         private readonly string currentUser;
+        private string _jsonPath = @"APOTEKKU_API_Kelompok2\Data\Keuangan.json";
 
         public RiwayatPembelian(string username)
         {
@@ -100,6 +102,41 @@ namespace GUI_KPL
             menuUserForm.FormClosed += (s, args) => this.Close();
             menuUserForm.Show();
             this.Hide();
+        }
+        private async void ProsesPembelian(string namaPembeli, int totalHarga)
+        {
+            // ... proses pembelian obat (update stok, dsb)
+
+            // Tambahkan transaksi keuangan
+            var transaksi = new TransaksiKeuangan(
+                "Pemasukan",
+                $"Pembelian obat oleh {namaPembeli}",
+                totalHarga,
+                DateTime.Now
+            );
+
+            // Baca data lama
+            List<TransaksiKeuangan> dataKeuangan;
+            if (File.Exists(_jsonPath))
+            {
+                var json = File.ReadAllText(_jsonPath);
+                dataKeuangan = JsonSerializer.Deserialize<List<TransaksiKeuangan>>(json) ?? new List<TransaksiKeuangan>();
+            }
+            else
+            {
+                dataKeuangan = new List<TransaksiKeuangan>();
+            }
+
+            dataKeuangan.Add(transaksi);
+
+            // Simpan ke file
+            var jsonBaru = JsonSerializer.Serialize(dataKeuangan, new JsonSerializerOptions { WriteIndented = true });
+            File.WriteAllText(_jsonPath, jsonBaru);
+
+            // Jika ingin refresh form keuangan:
+            // (misal, jika form keuangan sedang terbuka)
+            // var formKeuangan = Application.OpenForms["ManajemenKeuanganForm"] as ManajemenKeuanganForm;
+            // formKeuangan?.RefreshKeuangan();
         }
     }
 }

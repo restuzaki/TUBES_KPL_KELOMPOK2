@@ -16,6 +16,12 @@
     <Compile Update="Chatbot.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="InputTransaksiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ManajemenKeuanganForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="ManajemenPegawai.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -1,0 +1,14 @@
+[
+  {
+    "JenisTransaksi": "Pemasukan",
+    "Keterangan": "Penjualan obat",
+    "Jumlah": 50000,
+    "Tanggal": "2024-06-09T10:30:00"
+  },
+  {
+    "JenisTransaksi": "Pengeluaran",
+    "Keterangan": "Pembelian stok obat",
+    "Jumlah": 30000,
+    "Tanggal": "2024-06-08T14:00:00"
+  }
+]

@@ -44,14 +44,16 @@ namespace GUI_KPL
 
         private void button4_Click(object sender, EventArgs e)
         {
-            //implentasi disini
+            var formKeuangan = new ManajemenKeuanganForm();
+            formKeuangan.Show();
+            this.Hide();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             AnalisisPenyakitForm analisisPenyakitForm = new();
             analisisPenyakitForm.Show();
-            this.Hide(); 
+            this.Hide();
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -66,6 +68,11 @@ namespace GUI_KPL
             ManajemenPegawai manajemenPegawai = new ManajemenPegawai();
             manajemenPegawai.Show();
             this.Hide();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            // Kosongkan atau isi sesuai kebutuhan
         }
 
         private void MenuAdmin_Load(object sender, EventArgs e)
