@@ -88,5 +88,11 @@
     "Nama": "hida",
     "Password": "Hida",
     "Role": "Buyer"
+  },
+  {
+    "Id": 16,
+    "Nama": "admin123",
+    "Password": "123A",
+    "Role": "Buyer"
   }
 ]
