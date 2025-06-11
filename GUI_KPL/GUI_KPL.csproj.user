@@ -43,5 +43,8 @@
     <Compile Update="RiwayatPembelian.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="StokObatForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
