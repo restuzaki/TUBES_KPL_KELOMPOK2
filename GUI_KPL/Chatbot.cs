@@ -13,11 +13,11 @@ namespace GUI_KPL
         private FlowLayoutPanel chatContainer;
         private bool isFirstMessage = true;
 
-        public Chatbot(Apotekku_API.Models.User currentUser) // Pass the user object as a parameter  
+        public Chatbot(Apotekku_API.Models.User currentUser) 
         {
             InitializeComponent();
             _chatbotService = new ChatbotView();
-            _currentUser = currentUser; // Assign the passed user object to the field  
+            _currentUser = currentUser; 
 
             chatContainer = new FlowLayoutPanel
             {
@@ -31,10 +31,10 @@ namespace GUI_KPL
             panel2.Controls.Add(chatContainer);
             panel2.Controls.SetChildIndex(chatContainer, 2);
 
-            // Tombol kirim  
+
             button1.Click += async (s, e) => await SendMessageAsync();
 
-            // Enter key pada TextBox  
+            
             textBox1.KeyDown += async (s, e) =>
             {
                 if (e.KeyCode == Keys.Enter)
@@ -83,7 +83,7 @@ namespace GUI_KPL
 
         private void AddMessagePanel(string message, bool isUser)
         {
-            // Tampilkan separator1 hanya saat pesan pertama
+            
             if (isFirstMessage)
             {
                 Panel separator1 = new()
@@ -95,7 +95,7 @@ namespace GUI_KPL
                 };
                 chatContainer.Controls.Add(separator1);
 
-                // Setelah menampilkan separator1, set ke false agar tidak muncul lagi
+                
                 isFirstMessage = false;
             }
 
