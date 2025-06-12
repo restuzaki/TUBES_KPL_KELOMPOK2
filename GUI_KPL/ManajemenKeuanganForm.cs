@@ -4,12 +4,14 @@ using System.Text.Json;
 using System.IO;
 using System.Collections.Generic;
 using TUBES_KPL_KELOMPOK2.Services;
+using Apotekku_API.Models;
 
 namespace GUI_KPL
 {
     public partial class ManajemenKeuanganForm : Form
     {
         private string _jsonPath = @"APOTEKKU_API_Kelompok2\Data\Keuangan.json";
+        private readonly string currentUser;
         private List<TransaksiKeuangan> _dataKeuangan = new();
         private KeuanganService _keuanganService = new KeuanganService();
 
@@ -85,5 +87,20 @@ namespace GUI_KPL
         {
 
         }
+
+        private void TombolKembali_Click(object sender, EventArgs e)
+        {
+
+            User currentUser = new User
+            {
+                Nama = "Admin",
+                Role = "Admin"
+            };
+
+            var menuAdmin = new MenuAdmin(currentUser);
+            menuAdmin.Show();
+            this.Hide();
+        }
+
     }
 }

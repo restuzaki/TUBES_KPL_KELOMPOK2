@@ -72,7 +72,7 @@ namespace GUI_KPL
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            // Kosongkan atau isi sesuai kebutuhan
+            
         }
 
         private void MenuAdmin_Load(object sender, EventArgs e)

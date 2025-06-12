@@ -283,3 +283,7 @@ D:\bimo\semester 4\KPL\TUBES FINAL\GUI_KPL\obj\Debug\net8.0-windows\ref\GUI_KPL.
 D:\bimo\semester 4\KPL\TUBES FINAL\GUI_KPL\obj\Debug\net8.0-windows\GUI_KPL.ManajemenKeuanganForm.resources
 D:\bimo\semester 4\KPL\TUBES FINAL\GUI_KPL\bin\Debug\net8.0-windows\Data\Keuangan.json
 D:\bimo\semester 4\KPL\TUBES FINAL\GUI_KPL\obj\Debug\net8.0-windows\GUI_KPL.InputTransaksiForm.resources
+C:\Users\damai\TUBES_KPL_KELOMPOK2\GUI_KPL\bin\Debug\net8.0-windows\Data\Keuangan.json
+C:\Users\damai\TUBES_KPL_KELOMPOK2\GUI_KPL\obj\Debug\net8.0-windows\GUI_KPL.InputTransaksiForm.resources
+C:\Users\damai\TUBES_KPL_KELOMPOK2\GUI_KPL\obj\Debug\net8.0-windows\GUI_KPL.ManajemenKeuanganForm.resources
+C:\Users\damai\TUBES_KPL_KELOMPOK2\GUI_KPL\obj\Debug\net8.0-windows\GUI_KPL.StokObatForm.resources

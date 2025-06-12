@@ -24,113 +24,123 @@ namespace GUI_KPL
 
         private void InitializeComponent()
         {
-            this.cmbJenisTransaksi = new System.Windows.Forms.ComboBox();
-            this.txtKeterangan = new System.Windows.Forms.TextBox();
-            this.txtJumlah = new System.Windows.Forms.TextBox();
-            this.dtpTanggal = new System.Windows.Forms.DateTimePicker();
-            this.btnSimpan = new System.Windows.Forms.Button();
-            this.lblJenis = new System.Windows.Forms.Label();
-            this.lblKet = new System.Windows.Forms.Label();
-            this.lblJumlah = new System.Windows.Forms.Label();
-            this.lblTanggal = new System.Windows.Forms.Label();
-            this.SuspendLayout();
-            // 
-            // lblJenis
-            // 
-            this.lblJenis.AutoSize = true;
-            this.lblJenis.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblJenis.Location = new System.Drawing.Point(20, 20);
-            this.lblJenis.Name = "lblJenis";
-            this.lblJenis.Size = new System.Drawing.Size(110, 23);
-            this.lblJenis.Text = "Jenis Transaksi";
+            cmbJenisTransaksi = new ComboBox();
+            txtKeterangan = new TextBox();
+            txtJumlah = new TextBox();
+            dtpTanggal = new DateTimePicker();
+            btnSimpan = new Button();
+            lblJenis = new Label();
+            lblKet = new Label();
+            lblJumlah = new Label();
+            lblTanggal = new Label();
+            SuspendLayout();
             // 
             // cmbJenisTransaksi
             // 
-            this.cmbJenisTransaksi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbJenisTransaksi.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.cmbJenisTransaksi.Location = new System.Drawing.Point(150, 17);
-            this.cmbJenisTransaksi.Name = "cmbJenisTransaksi";
-            this.cmbJenisTransaksi.Size = new System.Drawing.Size(200, 31);
-            // 
-            // lblKet
-            // 
-            this.lblKet.AutoSize = true;
-            this.lblKet.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblKet.Location = new System.Drawing.Point(20, 60);
-            this.lblKet.Name = "lblKet";
-            this.lblKet.Size = new System.Drawing.Size(92, 23);
-            this.lblKet.Text = "Keterangan";
+            cmbJenisTransaksi.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbJenisTransaksi.Font = new Font("Yu Gothic UI Semibold", 10.2F, FontStyle.Bold);
+            cmbJenisTransaksi.Location = new Point(150, 17);
+            cmbJenisTransaksi.Name = "cmbJenisTransaksi";
+            cmbJenisTransaksi.Size = new Size(200, 31);
+            cmbJenisTransaksi.TabIndex = 1;
             // 
             // txtKeterangan
             // 
-            this.txtKeterangan.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtKeterangan.Location = new System.Drawing.Point(150, 57);
-            this.txtKeterangan.Name = "txtKeterangan";
-            this.txtKeterangan.Size = new System.Drawing.Size(200, 30);
-            // 
-            // lblJumlah
-            // 
-            this.lblJumlah.AutoSize = true;
-            this.lblJumlah.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblJumlah.Location = new System.Drawing.Point(20, 100);
-            this.lblJumlah.Name = "lblJumlah";
-            this.lblJumlah.Size = new System.Drawing.Size(65, 23);
-            this.lblJumlah.Text = "Jumlah";
+            txtKeterangan.Font = new Font("Yu Gothic UI Semibold", 10.2F, FontStyle.Bold);
+            txtKeterangan.Location = new Point(150, 57);
+            txtKeterangan.Name = "txtKeterangan";
+            txtKeterangan.Size = new Size(200, 30);
+            txtKeterangan.TabIndex = 3;
             // 
             // txtJumlah
             // 
-            this.txtJumlah.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.txtJumlah.Location = new System.Drawing.Point(150, 97);
-            this.txtJumlah.Name = "txtJumlah";
-            this.txtJumlah.Size = new System.Drawing.Size(200, 30);
-            // 
-            // lblTanggal
-            // 
-            this.lblTanggal.AutoSize = true;
-            this.lblTanggal.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblTanggal.Location = new System.Drawing.Point(20, 140);
-            this.lblTanggal.Name = "lblTanggal";
-            this.lblTanggal.Size = new System.Drawing.Size(72, 23);
-            this.lblTanggal.Text = "Tanggal";
+            txtJumlah.Font = new Font("Yu Gothic UI Semibold", 10.2F, FontStyle.Bold);
+            txtJumlah.Location = new Point(150, 97);
+            txtJumlah.Name = "txtJumlah";
+            txtJumlah.Size = new Size(200, 30);
+            txtJumlah.TabIndex = 5;
             // 
             // dtpTanggal
             // 
-            this.dtpTanggal.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.dtpTanggal.Location = new System.Drawing.Point(150, 137);
-            this.dtpTanggal.Name = "dtpTanggal";
-            this.dtpTanggal.Size = new System.Drawing.Size(200, 30);
+            dtpTanggal.Font = new Font("Yu Gothic UI Semibold", 10.2F, FontStyle.Bold);
+            dtpTanggal.Location = new Point(150, 137);
+            dtpTanggal.Name = "dtpTanggal";
+            dtpTanggal.Size = new Size(200, 30);
+            dtpTanggal.TabIndex = 7;
             // 
             // btnSimpan
             // 
-            this.btnSimpan.BackColor = System.Drawing.Color.YellowGreen;
-            this.btnSimpan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSimpan.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSimpan.ForeColor = System.Drawing.Color.White;
-            this.btnSimpan.Location = new System.Drawing.Point(150, 180);
-            this.btnSimpan.Name = "btnSimpan";
-            this.btnSimpan.Size = new System.Drawing.Size(100, 35);
-            this.btnSimpan.Text = "Simpan";
-            this.btnSimpan.UseVisualStyleBackColor = false;
-            this.btnSimpan.Click += new System.EventHandler(this.btnSimpan_Click);
+            btnSimpan.BackColor = Color.YellowGreen;
+            btnSimpan.FlatStyle = FlatStyle.Flat;
+            btnSimpan.Font = new Font("Yu Gothic UI Semibold", 10.2F, FontStyle.Bold);
+            btnSimpan.ForeColor = Color.White;
+            btnSimpan.Location = new Point(150, 180);
+            btnSimpan.Name = "btnSimpan";
+            btnSimpan.Size = new Size(100, 35);
+            btnSimpan.TabIndex = 8;
+            btnSimpan.Text = "Simpan";
+            btnSimpan.UseVisualStyleBackColor = false;
+            btnSimpan.Click += btnSimpan_Click;
+            // 
+            // lblJenis
+            // 
+            lblJenis.AutoSize = true;
+            lblJenis.Font = new Font("Yu Gothic UI Semibold", 10.2F, FontStyle.Bold);
+            lblJenis.Location = new Point(20, 20);
+            lblJenis.Name = "lblJenis";
+            lblJenis.Size = new Size(120, 23);
+            lblJenis.TabIndex = 0;
+            lblJenis.Text = "Jenis Transaksi";
+            // 
+            // lblKet
+            // 
+            lblKet.AutoSize = true;
+            lblKet.Font = new Font("Yu Gothic UI Semibold", 10.2F, FontStyle.Bold);
+            lblKet.Location = new Point(20, 60);
+            lblKet.Name = "lblKet";
+            lblKet.Size = new Size(98, 23);
+            lblKet.TabIndex = 2;
+            lblKet.Text = "Keterangan";
+            // 
+            // lblJumlah
+            // 
+            lblJumlah.AutoSize = true;
+            lblJumlah.Font = new Font("Yu Gothic UI Semibold", 10.2F, FontStyle.Bold);
+            lblJumlah.Location = new Point(20, 100);
+            lblJumlah.Name = "lblJumlah";
+            lblJumlah.Size = new Size(65, 23);
+            lblJumlah.TabIndex = 4;
+            lblJumlah.Text = "Jumlah";
+            // 
+            // lblTanggal
+            // 
+            lblTanggal.AutoSize = true;
+            lblTanggal.Font = new Font("Yu Gothic UI Semibold", 10.2F, FontStyle.Bold);
+            lblTanggal.Location = new Point(20, 140);
+            lblTanggal.Name = "lblTanggal";
+            lblTanggal.Size = new Size(69, 23);
+            lblTanggal.TabIndex = 6;
+            lblTanggal.Text = "Tanggal";
             // 
             // InputTransaksiForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(380, 240);
-            this.Controls.Add(this.lblJenis);
-            this.Controls.Add(this.cmbJenisTransaksi);
-            this.Controls.Add(this.lblKet);
-            this.Controls.Add(this.txtKeterangan);
-            this.Controls.Add(this.lblJumlah);
-            this.Controls.Add(this.txtJumlah);
-            this.Controls.Add(this.lblTanggal);
-            this.Controls.Add(this.dtpTanggal);
-            this.Controls.Add(this.btnSimpan);
-            this.Name = "InputTransaksiForm";
-            this.Text = "Input Transaksi";
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(380, 240);
+            Controls.Add(lblJenis);
+            Controls.Add(cmbJenisTransaksi);
+            Controls.Add(lblKet);
+            Controls.Add(txtKeterangan);
+            Controls.Add(lblJumlah);
+            Controls.Add(txtJumlah);
+            Controls.Add(lblTanggal);
+            Controls.Add(dtpTanggal);
+            Controls.Add(btnSimpan);
+            Name = "InputTransaksiForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Input Transaksi";
+            ResumeLayout(false);
+            PerformLayout();
         }
     }
 }
