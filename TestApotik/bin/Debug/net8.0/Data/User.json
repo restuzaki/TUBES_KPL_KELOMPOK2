@@ -76,5 +76,17 @@
     "Nama": "raihan",
     "Password": "Raihan1",
     "Role": "Buyer"
+  },
+  {
+    "Id": 14,
+    "Nama": "jika",
+    "Password": "Jika12",
+    "Role": "Buyer"
+  },
+  {
+    "Id": 15,
+    "Nama": "hida",
+    "Password": "Hida",
+    "Role": "Buyer"
   }
 ]

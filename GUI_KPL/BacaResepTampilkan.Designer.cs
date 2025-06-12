@@ -39,22 +39,22 @@
             label6.AutoSize = true;
             label6.Font = new Font("Yu Gothic UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.YellowGreen;
-            label6.Location = new Point(94, 78);
-            label6.Margin = new Padding(6, 0, 6, 0);
+            label6.Location = new Point(58, 49);
+            label6.Margin = new Padding(4, 0, 4, 0);
             label6.Name = "label6";
-            label6.Size = new Size(507, 51);
+            label6.Size = new Size(323, 32);
             label6.TabIndex = 32;
             label6.Text = "Apotekku Data seluruh obat\r\n";
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(105, 147);
-            dataGridView1.Margin = new Padding(6);
+            dataGridView1.Location = new Point(65, 92);
+            dataGridView1.Margin = new Padding(4, 4, 4, 4);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 82;
             dataGridView1.ScrollBars = ScrollBars.Vertical;
-            dataGridView1.Size = new Size(1172, 954);
+            dataGridView1.Size = new Size(721, 596);
             dataGridView1.TabIndex = 28;
             // 
             // button3
@@ -62,10 +62,10 @@
             button3.BackColor = Color.YellowGreen;
             button3.Font = new Font("Yu Gothic UI Semibold", 9F, FontStyle.Bold);
             button3.ForeColor = Color.White;
-            button3.Location = new Point(1289, 1016);
-            button3.Margin = new Padding(6);
+            button3.Location = new Point(793, 635);
+            button3.Margin = new Padding(4, 4, 4, 4);
             button3.Name = "button3";
-            button3.Size = new Size(189, 85);
+            button3.Size = new Size(116, 53);
             button3.TabIndex = 31;
             button3.Text = "Kembali";
             button3.UseVisualStyleBackColor = false;
@@ -73,13 +73,15 @@
             // 
             // BacaResepTampilkan
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1519, 1186);
+            ClientSize = new Size(935, 734);
             Controls.Add(label6);
             Controls.Add(button3);
             Controls.Add(dataGridView1);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "BacaResepTampilkan";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "BacaResepTampilkan";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);

@@ -28,5 +28,11 @@
     "nama": "Yudha",
     "jabatan": "CEO",
     "status": 0
+  },
+  {
+    "id": "PG010",
+    "nama": "Bondan",
+    "jabatan": "CEO",
+    "status": 0
   }
 ]

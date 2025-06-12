@@ -1,0 +1,14 @@
+[
+  {
+    "JenisTransaksi": "Pemasukan",
+    "Keterangan": "obat",
+    "Jumlah": 50000,
+    "Tanggal": "2025-06-09T17:20:40.8626804+07:00"
+  },
+  {
+    "JenisTransaksi": "Pengeluaran",
+    "Keterangan": "Restock",
+    "Jumlah": 600000,
+    "Tanggal": "2025-06-09T17:38:05.2163706+07:00"
+  }
+]

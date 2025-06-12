@@ -1,18 +1,26 @@
 [
-    {
-        "Id": "M001",
-        "Nama": "Dewi Anggraini",
-        "Alamat": "Jl. Kenanga No.10",
-        "TanggalLahir": "1995-06-12",
-        "NomorTelepon": "081234567890",
-        "Poin": 120
-    },
-    {
-        "Id": "M002",
-        "Nama": "Budi Hartono",
-        "Alamat": "Jl. Melati No.5",
-        "TanggalLahir": "1988-11-20",
-        "NomorTelepon": "082233445566",
-        "Poin": 250
-    }
+  {
+    "Id": "M001",
+    "Nama": "Dewi Anggraini",
+    "Alamat": "Jl. Kenanga No.10",
+    "TanggalLahir": "1995-06-12",
+    "NomorTelepon": "081234567890",
+    "Poin": 120
+  },
+  {
+    "Id": "M002",
+    "Nama": "Budi Hartono",
+    "Alamat": "Jl. Melati No.5",
+    "TanggalLahir": "1988-11-20",
+    "NomorTelepon": "082233445566",
+    "Poin": 250
+  },
+  {
+    "Id": "M003",
+    "Nama": "Achmad fadjry",
+    "Alamat": "bekasi PondokUnguPermai",
+    "TanggalLahir": "2012-12-12",
+    "NomorTelepon": "081282647811",
+    "Poin": 0
+  }
 ]

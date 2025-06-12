@@ -8,7 +8,8 @@ namespace TUBES_KPL_KELOMPOK2.Services
     public class KeuanganService
     {
         private List<TransaksiKeuangan> _transaksiKeuangan = new List<TransaksiKeuangan>();
-        public string State { get; private set; } = "Idle"; // State-based implementation
+        public string State { get; private set; } = "Idle"; // State-based 
+        private string _jsonPath = @"APOTEKKU_API_Kelompok2\Data\Keuangan.json";
 
         public async Task TambahTransaksiAsync(TransaksiKeuangan transaksi)
         {
